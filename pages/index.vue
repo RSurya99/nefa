@@ -370,6 +370,73 @@
         </div>
       </div>
     </section>
+
+    <!-- Credit card section -->
+    <section class="w-full my-36">
+      <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
+        <div class="col-span-12 lg:col-span-7">
+          <div class="w-full">
+            <img :src="require('~/assets/img/nefa-cc.png')" class="w-[95%]" alt="" />
+          </div>
+        </div>
+        <div class="col-span-12 lg:col-span-5 space-y-6 px-6 mt-20">
+          <h2 class="text-4xl font-semibold">Introducing the <span class="text-gradient">NEFA</span> Credit Card</h2>
+          <p class="text-gray-700 tracking-wide leading-relaxed">
+            Subject to cardholder and rewards terms which will be available at application.
+          </p>
+          <ul class="space-y-2">
+            <li class="flex items-center space-x-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-[#0c66ee]"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Up to 3% back on purchases</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-[#0c66ee]"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Earn rewards in bitcoin or any crypto on NEFA</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-[#0c66ee]"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>No annual fee</span>
+            </li>
+          </ul>
+          <button class="px-10 py-4 text-center bg-inherit text-gradient rounded-full border border-[#0c66ee]">
+            Join the waitlist
+          </button>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
