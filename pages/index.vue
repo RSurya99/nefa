@@ -295,11 +295,11 @@
           </p>
           <div class="space-y-6 pr-12">
             <div class="flex items-center space-x-4">
-              <div class="flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
+              <div class="w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
                 <span class="text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> Amount </span>
                 <input
-                  type="number"
-                  class="text-lg font-medium text-right border-none ring-0 focus:outline-none focus:ring-0"
+                  type="text"
+                  class="w-full text-lg font-medium text-right border-none ring-0 focus:outline-none focus:ring-0"
                   name="url"
                   placeholder="5,000"
                 />
@@ -310,31 +310,27 @@
                   name="country"
                   class="pr-[30px] text-sm font-medium border-none ring-0 focus:outline-none focus:ring-0"
                 >
-                  <option value="USD">
-                    <div>USD</div>
-                  </option>
+                  <option value="USD">USD</option>
                 </select>
               </div>
             </div>
             <div class="flex items-center space-x-4">
-              <div class="flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
-                <span class="text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> Amount </span>
+              <div class="w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
+                <span class="text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> Get </span>
                 <input
-                  type="number"
-                  class="text-lg font-medium text-right border-none ring-0 focus:outline-none focus:ring-0"
+                  type="text"
+                  class="w-full text-lg font-medium text-right border-none ring-0 focus:outline-none focus:ring-0"
                   name="url"
-                  placeholder="5,000"
+                  placeholder="0.10901"
                 />
               </div>
               <div class="flex items-center relative px-6 py-4 border border-[#0c66ee] rounded-xl">
-                <img :src="require('~/assets/img/country-icon/eng.png')" class="w-8" />
+                <img :src="require('~/assets/img/crypto-icon/bitcoin.png')" class="w-8" />
                 <select
                   name="country"
                   class="pr-[30px] text-sm font-medium border-none ring-0 focus:outline-none focus:ring-0"
                 >
-                  <option value="USD">
-                    <div>USD</div>
-                  </option>
+                  <option value="BTC">BTC</option>
                 </select>
               </div>
             </div>
