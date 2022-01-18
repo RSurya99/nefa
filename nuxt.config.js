@@ -1,4 +1,7 @@
 export default {
+  server: {
+    port: 8080, // default: 3000
+  },
   head: {
     title: 'NEFA',
     htmlAttrs: {
