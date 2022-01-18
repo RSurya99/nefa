@@ -8,7 +8,7 @@
           <h1 class="text-5xl xl:text-6xl font-bold capitalize sm:pr-8 xl:pr-12">
             The World's <span class="text-header-gradient">Fastest Growing</span> Crypto Web App
           </h1>
-          <p class="text-gray-700 leading-relaxed">
+          <p class="text-gray-700 tracking-wide leading-relaxed">
             Buy and sell 200+ cryptocurrencies with 20+ flat currencies using bank transfers or your credit/debit card.
           </p>
           <div class="flex space-x-4 mt-2">
@@ -290,7 +290,7 @@
             Buy & trade on the<br />
             original crypto exchange.
           </h2>
-          <p class="text-gray-700 leading-relaxed">
+          <p class="text-gray-700 tracking-wide leading-relaxed">
             Buy now and get 40% extra bonus Minimum pre-sale amount 25 Crypto Coin. We accept BTC crypto-currency
           </p>
           <div class="space-y-6 pr-12">
@@ -304,11 +304,11 @@
                   placeholder="5,000"
                 />
               </div>
-              <div class="flex items-center relative px-6 py-4 border border-[#0c66ee] rounded-xl">
+              <div class="flex items-center relative px-7 py-4 border border-[#0c66ee] rounded-xl">
                 <img :src="require('~/assets/img/country-icon/eng.png')" class="w-8" />
                 <select
                   name="country"
-                  class="pr-[30px] text-sm font-medium border-none ring-0 focus:outline-none focus:ring-0"
+                  class="pr-7 text-sm font-medium border-none ring-0 focus:outline-none focus:ring-0"
                 >
                   <option value="USD">USD</option>
                 </select>
@@ -328,7 +328,7 @@
                 <img :src="require('~/assets/img/crypto-icon/bitcoin.png')" class="w-8" />
                 <select
                   name="country"
-                  class="pr-[30px] text-sm font-medium border-none ring-0 focus:outline-none focus:ring-0"
+                  class="pr-7 text-sm font-medium border-none ring-0 focus:outline-none focus:ring-0"
                 >
                   <option value="BTC">BTC</option>
                 </select>
@@ -342,6 +342,30 @@
         <div class="col-span-12 lg:col-span-6">
           <div class="w-full">
             <img :src="require('~/assets/img/buy-and-trade.png')" class="-mt-4" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners section -->
+    <section class="bg-partner relative max-w-full mx-10 my-24 shadow rounded-2xl overflow-hidden">
+      <div class="w-full py-16 flex flex-col items-center justify-center space-y-4">
+        <h3 class="text-2xl text-neutral-800 font-semibold">Trusted Partners Worldwide</h3>
+        <p class="text-gray-700 tracking-wide leading-relaxed">
+          We're partners with countless major organisations around the globe
+        </p>
+        <div class="flex items-center justify-center">
+          <div>
+            <img :src="require('~/assets/img/partner/clever.png')" class="w-72" alt="" />
+          </div>
+          <div>
+            <img :src="require('~/assets/img/partner/clever.png')" class="w-72" alt="" />
+          </div>
+          <div>
+            <img :src="require('~/assets/img/partner/clever.png')" class="w-72" alt="" />
+          </div>
+          <div>
+            <img :src="require('~/assets/img/partner/clever.png')" class="w-72" alt="" />
           </div>
         </div>
       </div>
@@ -466,5 +490,10 @@ export default {
   background: linear-gradient(169.4deg, #3984f4 -6.01%, #0cd3ff 36.87%, #2f7cf0 78.04%, #0e65e8 103.77%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.bg-partner {
+  background: url('../assets/img/partner/background.png');
+  background-size: cover;
+  background-position: center;
 }
 </style>
