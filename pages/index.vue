@@ -440,7 +440,7 @@
       </div>
     </section>
 
-    <!-- Trading tools section -->
+    <!-- Advanced trading tools section -->
     <section class="bg-trading-tools relative max-w-full mx-8 my-20 py-16 shadow rounded-2xl overflow-hidden">
       <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div class="col-span-12 lg:col-span-6 space-y-6 px-6 mt-8">
@@ -477,6 +477,86 @@
           <div class="w-full">
             <img :src="require('~/assets/img/advanced-trading-tools.png')" class="w-full" alt="" />
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry-leading security section -->
+    <section class="w-full my-36">
+      <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
+        <div class="col-span-12 lg:col-span-6">
+          <div class="w-full">
+            <img :src="require('~/assets/img/industry-leading-security.png')" class="w-full" alt="" />
+          </div>
+        </div>
+        <div class="col-span-12 lg:col-span-5 space-y-6 mt-8 px-8">
+          <h2 class="text-4xl font-semibold">Industry-leading security from day one</h2>
+          <ul class="space-y-4">
+            <li class="space-y-2">
+              <div class="flex items-center space-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-[#0c66ee]"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Safety, security and compliance</span>
+              </div>
+              <p class="text-sm text-gray-700 leading-relaxed">
+                NEFA is a licensed New York trust company that undergoes regular bank exams and is subject to the
+                cybersecurity audits conducted by the New York Department of Financial Services.
+                <span class="underline">Learn more</span> about our commitment to security.
+              </p>
+            </li>
+            <li class="space-y-2">
+              <div class="flex items-center space-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-[#0c66ee]"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Hardware security keys</span>
+              </div>
+              <p class="text-sm text-gray-700 leading-relaxed">
+                With NEFA you can secure your account with a hardware security key via WebAuthn.
+              </p>
+            </li>
+            <li class="space-y-2">
+              <div class="flex items-center space-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-[#0c66ee]"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>SOC Certifications</span>
+              </div>
+              <p class="text-sm text-gray-700 leading-relaxed">
+                NEFA is <span class="underline">SOC 1 Type 2</span> and
+                <span class="underline">SOC 2 Type 2</span> compliant. We are the world’s first cryptocurrency exchange
+                and custodian to complete these exams.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
