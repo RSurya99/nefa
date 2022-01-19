@@ -5,7 +5,7 @@
       <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-20 space-y-6 px-6">
           <span class="text-base text-gradient font-semibold uppercase">Sign Up Today</span>
-          <h1 class="text-5xl xl:text-6xl font-bold capitalize sm:pr-8 xl:pr-12">
+          <h1 class="text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10">
             The World's <span class="text-header-gradient">Fastest Growing</span> Crypto Web App
           </h1>
           <p class="text-gray-700 tracking-wide leading-relaxed">
@@ -602,6 +602,203 @@
         </div>
       </div>
     </section>
+
+    <!-- FAQ section -->
+    <section class="w-full my-24">
+      <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
+        <div class="col-span-12 lg:col-span-6">
+          <div class="w-full">
+            <img :src="require('~/assets/img/faq.png')" class="w-full" alt="" />
+          </div>
+        </div>
+        <div class="col-span-12 lg:col-span-6 px-6 mt-8">
+          <span class="text-base text-gradient font-semibold uppercase mb-2">Support</span>
+          <h2 class="text-4xl font-semibold mb-6">Frequently asked questions</h2>
+
+          <ul class="shadow-box">
+            <li class="relative border-b-2 border-gray-200">
+              <button type="button" class="w-full py-4 text-left" @click="selected = !selected">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium">Why should I choose NEFA?</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      v-if="selected"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                    <path
+                      v-else-if="!selected"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </button>
+
+              <transition name="slide">
+                <div v-if="selected" class="relative overflow-hidden transition-all duration-700" style="">
+                  <div class="py-2">
+                    <p class="text-sm text-gray-700 tracking-wide leading-relaxed">
+                      We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated
+                      more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries.
+                      Today, we're trusted by over 8 million customers around the world and have received praise for our
+                      easy-to-use app, secure wallet, and range of features.
+                    </p>
+                  </div>
+                </div>
+              </transition>
+            </li>
+            <li class="relative border-b-2 border-gray-200">
+              <button type="button" class="w-full py-4 text-left" @click="selected = !selected">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium">How secure is NEFA?</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      v-if="selected"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                    <path
+                      v-else-if="!selected"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </button>
+
+              <transition name="slide">
+                <div v-if="selected" class="relative overflow-hidden transition-all duration-700" style="">
+                  <div class="py-2">
+                    <p class="text-sm text-gray-700 tracking-wide leading-relaxed">
+                      We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated
+                      more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries.
+                      Today, we're trusted by over 8 million customers around the world and have received praise for our
+                      easy-to-use app, secure wallet, and range of features.
+                    </p>
+                  </div>
+                </div>
+              </transition>
+            </li>
+            <li class="relative border-b-2 border-gray-200">
+              <button type="button" class="w-full py-4 text-left" @click="selected = !selected">
+                <div class="flex items-center justify-between">
+                  <span>Do I have to buy a whole Bitcoin?</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      v-if="selected"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                    <path
+                      v-else-if="!selected"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </button>
+
+              <transition name="slide">
+                <div v-if="selected" class="relative overflow-hidden transition-all duration-700" style="">
+                  <div class="py-2">
+                    <p class="text-sm text-gray-700 tracking-wide leading-relaxed">
+                      We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated
+                      more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries.
+                      Today, we're trusted by over 8 million customers around the world and have received praise for our
+                      easy-to-use app, secure wallet, and range of features.
+                    </p>
+                  </div>
+                </div>
+              </transition>
+            </li>
+            <li class="relative border-b-2 border-gray-200">
+              <button type="button" class="w-full py-4 text-left" @click="selected = !selected">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium">How do I actually buy Bitcoin?</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      v-if="selected"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                    <path
+                      v-else-if="!selected"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </button>
+
+              <transition name="slide">
+                <div v-if="selected" class="relative overflow-hidden transition-all duration-700" style="">
+                  <div class="py-2">
+                    <p class="text-sm text-gray-700 tracking-wide leading-relaxed">
+                      We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated
+                      more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries.
+                      Today, we're trusted by over 8 million customers around the world and have received praise for our
+                      easy-to-use app, secure wallet, and range of features.
+                    </p>
+                  </div>
+                </div>
+              </transition>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="w-full my-10">
+      <button
+        class="mx-auto px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] border border-[#DDDDDD] rounded-md text-gray-700"
+      >
+        <span>Back to top</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+        </svg>
+      </button>
+    </div>
   </div>
 </template>
 
@@ -610,6 +807,7 @@ export default {
   name: 'IndexPage',
   data() {
     return {
+      selected: 0,
       trendings: [
         {
           id: 1,
@@ -733,5 +931,42 @@ export default {
 }
 .bg-trading-tools {
   background: url('../assets/img/bg-trading-tools.png');
+}
+.max-h-0 {
+  max-height: 0;
+}
+
+.slide-enter-active {
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+.slide-leave-active {
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.slide-enter-to,
+.slide-leave {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.slide-enter,
+.slide-leave-to {
+  overflow: hidden;
+  max-height: 0;
 }
 </style>

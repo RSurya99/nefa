@@ -69,7 +69,7 @@
         </div>
       </nav>
 
-      <main>
+      <main class="text-neutral-800">
         <Nuxt />
       </main>
 
