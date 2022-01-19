@@ -589,6 +589,16 @@
               anywhere
             </p>
           </div>
+          <img
+            :src="require('~/assets/img/getting-started/arrow.png')"
+            class="absolute top-32 left-[22rem] w-[9.5rem]"
+            alt=""
+          />
+          <img
+            :src="require('~/assets/img/getting-started/arrow.png')"
+            class="absolute top-32 right-[22rem] w-[9.5rem]"
+            alt=""
+          />
         </div>
       </div>
     </section>
