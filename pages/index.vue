@@ -61,7 +61,7 @@
       <div class="w-full flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-8">
         <div class="w-1/3 overflow-hidden space-y-6 border-r border-gray-200 px-8">
           <div class="w-full flex items-center justify-between">
-            <h3 class="font-medium">🔥 Trending</h3>
+            <span class="font-medium">🔥 Trending</span>
             <a href="#" class="text-sm font-medium text-blue-500 flex items-center space-x-1">
               <span>More</span>
               <svg
@@ -133,7 +133,7 @@
         </div>
         <div class="w-1/3 overflow-hidden space-y-6 border-r border-gray-200 px-8">
           <div class="w-full flex items-center justify-between">
-            <h3 class="font-medium">🚀 Top Gainers</h3>
+            <span class="font-medium">🚀 Top Gainers</span>
             <a href="#" class="text-sm font-medium text-blue-500 flex items-center space-x-1">
               <span>More</span>
               <svg
@@ -209,7 +209,7 @@
         </div>
         <div class="w-1/3 overflow-hidden space-y-6 px-8">
           <div class="w-full flex items-center justify-between">
-            <h3 class="font-medium">💎 Recently Added</h3>
+            <span class="font-medium">💎 Recently Added</span>
             <a href="#" class="text-sm font-medium text-blue-500 flex items-center space-x-1">
               <span>More</span>
               <svg
@@ -359,13 +359,13 @@
             <img :src="require('~/assets/img/partner/clever.png')" class="w-72" alt="" />
           </div>
           <div>
-            <img :src="require('~/assets/img/partner/clever.png')" class="w-72" alt="" />
+            <img :src="require('~/assets/img/partner/diamon-cutts.png')" class="w-72" alt="" />
           </div>
           <div>
-            <img :src="require('~/assets/img/partner/clever.png')" class="w-72" alt="" />
+            <img :src="require('~/assets/img/partner/swiss-finance.png')" class="w-72" alt="" />
           </div>
           <div>
-            <img :src="require('~/assets/img/partner/clever.png')" class="w-72" alt="" />
+            <img :src="require('~/assets/img/partner/gambio.png')" class="w-72" alt="" />
           </div>
         </div>
       </div>
@@ -380,7 +380,9 @@
           </div>
         </div>
         <div class="col-span-12 lg:col-span-5 space-y-6 px-6 mt-20">
-          <h2 class="text-4xl font-semibold">Introducing the <span class="text-gradient">NEFA</span> Credit Card</h2>
+          <h2 class="text-4xl font-semibold">
+            Introducing the <span class="text-header-gradient">NEFA</span> Credit Card
+          </h2>
           <p class="text-gray-700 tracking-wide leading-relaxed">
             Subject to cardholder and rewards terms which will be available at application.
           </p>
@@ -434,6 +436,47 @@
           <button class="px-10 py-4 text-center bg-inherit text-gradient rounded-full border border-[#0c66ee]">
             Join the waitlist
           </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trading tools section -->
+    <section class="bg-trading-tools relative max-w-full mx-8 my-20 py-16 shadow rounded-2xl overflow-hidden">
+      <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
+        <div class="col-span-12 lg:col-span-6 space-y-6 px-6 mt-8">
+          <h2 class="text-4xl font-semibold">Advanced Trading <span class="text-header-gradient">Tools</span></h2>
+          <div class="space-y-2">
+            <h4 class="text-lg font-medium">Professional Access, Non-stop Availability</h4>
+            <p class="text-gray-700 tracking-wide leading-relaxed">
+              We provide premium access to crypto trading for both individuals and institutions through high liquidity,
+              reliable order execution and constant uptime.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="text-lg font-medium">A Range of Powerful Apis</h4>
+            <p class="text-gray-700 tracking-wide leading-relaxed">
+              Set up your own trading interface or deploy your algorithmic strategy with our high-performance FIX and
+              HTTP APIs. Connect to our WebSocket for real-time data streaming.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="text-lg font-medium">Customer Support</h4>
+            <p class="text-gray-700 tracking-wide leading-relaxed">
+              Premium 24/7 support available to all customers worldwide by phone or email. Dedicated account managers
+              for partners.
+            </p>
+          </div>
+          <div>
+            <button class="bg-inherit text-gradient px-10 py-4 text-center rounded-full border border-[#4A8FF6]">
+              Get Started
+            </button>
+            <button class="bg-inherit text-[#4A8FF6] px-10 py-4 text-center underline rounded-full">Learn More</button>
+          </div>
+        </div>
+        <div class="col-span-12 lg:col-span-6">
+          <div class="w-full">
+            <img :src="require('~/assets/img/advanced-trading-tools.png')" class="w-full" alt="" />
+          </div>
         </div>
       </div>
     </section>
@@ -558,9 +601,15 @@ export default {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.bg-partner {
-  background: url('../assets/img/partner/background.png');
+.bg-partner,
+.bg-trading-tools {
   background-size: cover;
   background-position: center;
+}
+.bg-partner {
+  background: url('../assets/img/partner/background.png');
+}
+.bg-trading-tools {
+  background: url('../assets/img/bg-trading-tools.png');
 }
 </style>
