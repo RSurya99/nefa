@@ -482,7 +482,7 @@
     </section>
 
     <!-- Industry-leading security section -->
-    <section class="w-full my-36">
+    <section class="w-full my-24">
       <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div class="col-span-12 lg:col-span-6">
           <div class="w-full">
@@ -557,6 +557,38 @@
               </p>
             </li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Getting started section -->
+    <section class="bg-trading-tools relative max-w-full mx-10 my-24 shadow rounded-2xl overflow-hidden">
+      <div class="w-full py-16 flex flex-col items-center">
+        <h2 class="text-4xl font-semibold text-center">Get started in just a few minutes</h2>
+        <div class="relative w-full flex items-center justify-between px-10 mt-8">
+          <div class="max-w-[363px] space-y-3 text-center">
+            <img :src="require('~/assets/img/getting-started/sign-up.png')" class="max-w-[245px] mx-auto" alt="" />
+            <h3 class="text-xl text-neutral-800 font-semibold">Sign Up</h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Sign up for your free NEFA Wallet on web, iOS or Android and follow our easy process to set up your
+              profile
+            </p>
+          </div>
+          <div class="max-w-[363px] space-y-3 text-center">
+            <img :src="require('~/assets/img/getting-started/fund.png')" class="max-w-[245px] mx-auto" alt="" />
+            <h3 class="text-xl text-neutral-800 font-semibold">Fund</h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Choose your preferred payment method such as bank transfer or credit card to top up your NEFA Wallet
+            </p>
+          </div>
+          <div class="max-w-[363px] space-y-3 text-center">
+            <img :src="require('~/assets/img/getting-started/buy-crypto.png')" class="max-w-[245px] mx-auto" alt="" />
+            <h3 class="text-xl text-neutral-800 font-semibold">Buy Crypto</h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Buy Bitcoin or Ethereum, then securely store it in your Wallet or send it on easily to your friends
+              anywhere
+            </p>
+          </div>
         </div>
       </div>
     </section>
