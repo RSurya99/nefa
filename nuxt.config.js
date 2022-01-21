@@ -1,7 +1,4 @@
 export default {
-  server: {
-    port: 8080, // default: 3000
-  },
   head: {
     title: 'NEFA',
     htmlAttrs: {
@@ -22,13 +19,9 @@ export default {
     ],
   },
   css: ['@/assets/css/main.css'],
-  plugins: [],
+  plugins: ['@/plugins/smooth-scroll.js'],
   components: true,
-  buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    '@nuxt/postcss8',
-  ],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxt/postcss8'],
   modules: [],
   build: {
     postcss: {

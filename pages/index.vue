@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <!-- Hero section -->
-    <section class="w-full pb-24">
+    <section id="hero" class="w-full pb-24">
       <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-20 space-y-6 px-6">
           <span class="text-base text-gradient font-semibold uppercase">Sign Up Today</span>
@@ -12,14 +12,10 @@
             Buy and sell 200+ cryptocurrencies with 20+ flat currencies using bank transfers or your credit/debit card.
           </p>
           <div class="flex space-x-4 mt-2">
-            <button
-              class="px-8 py-4 text-sm text-center bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white rounded-full"
+            <base-button class="px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white"
+              >Get Started</base-button
             >
-              Get Started
-            </button>
-            <button
-              class="px-6 py-4 text-sm text-center bg-inherit text-gradient rounded-full border border-[#0c66ee] flex items-center space-x-1"
-            >
+            <base-button class="px-6 py-4 bg-inherit text-gradient border border-[#0c66ee] flex items-center space-x-1">
               <span>Download App</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +26,7 @@
               >
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
-            </button>
+            </base-button>
           </div>
         </div>
         <div class="col-span-12 lg:col-span-6">
@@ -295,16 +291,18 @@
           </p>
           <div class="space-y-6 pr-12">
             <div class="flex items-center space-x-4">
-              <div class="w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
+              <div class="max-w-[336px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
                 <span class="text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> Amount </span>
                 <input
                   type="text"
                   class="w-full text-lg font-medium text-right border-none ring-0 focus:outline-none focus:ring-0"
                   name="url"
-                  placeholder="5,000"
+                  value="5,000"
                 />
               </div>
-              <div class="flex items-center relative px-7 py-4 border border-[#0c66ee] rounded-xl">
+              <div
+                class="max-w-[159px] w-full flex items-center justify-center relative px-7 py-4 border border-[#0c66ee] rounded-xl"
+              >
                 <img :src="require('~/assets/img/country-icon/eng.png')" class="w-8" />
                 <select
                   name="country"
@@ -315,16 +313,18 @@
               </div>
             </div>
             <div class="flex items-center space-x-4">
-              <div class="w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
+              <div class="max-w-[336px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
                 <span class="text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> Get </span>
                 <input
                   type="text"
                   class="w-full text-lg font-medium text-right border-none ring-0 focus:outline-none focus:ring-0"
                   name="url"
-                  placeholder="0.10901"
+                  value="0.10901"
                 />
               </div>
-              <div class="flex items-center relative px-6 py-4 border border-[#0c66ee] rounded-xl">
+              <div
+                class="max-w-[159px] w-full flex items-center justify-center relative px-6 py-4 border border-[#0c66ee] rounded-xl"
+              >
                 <img :src="require('~/assets/img/crypto-icon/bitcoin.png')" class="w-8" />
                 <select
                   name="country"
@@ -334,9 +334,9 @@
                 </select>
               </div>
             </div>
-            <button class="w-full px-5 py-4 bg-blue-gradient rounded-full text-center text-white font-medium">
-              Buy Now
-            </button>
+            <base-button class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium"
+              >Buy Now</base-button
+            >
           </div>
         </div>
         <div class="col-span-12 lg:col-span-6">
@@ -433,9 +433,9 @@
               <span>No annual fee</span>
             </li>
           </ul>
-          <button class="px-10 py-4 text-center bg-inherit text-gradient rounded-full border border-[#0c66ee]">
-            Join the waitlist
-          </button>
+          <base-button class="px-10 py-4 bg-inherit text-gradient border border-[#0c66ee] text-base"
+            >Join the waitlist</base-button
+          >
         </div>
       </div>
     </section>
@@ -467,9 +467,9 @@
             </p>
           </div>
           <div>
-            <button class="bg-inherit text-gradient px-10 py-4 text-center rounded-full border border-[#4A8FF6]">
-              Get Started
-            </button>
+            <base-button class="px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base"
+              >Get Started</base-button
+            >
             <button class="bg-inherit text-[#4A8FF6] px-10 py-4 text-center underline rounded-full">Learn More</button>
           </div>
         </div>
@@ -703,7 +703,7 @@
             <li class="relative border-b-2 border-gray-200">
               <button type="button" class="w-full py-4 text-left" @click="selected = !selected">
                 <div class="flex items-center justify-between">
-                  <span>Do I have to buy a whole Bitcoin?</span>
+                  <span class="font-medium">Do I have to buy a whole Bitcoin?</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-4 w-4"
@@ -789,15 +789,17 @@
       </div>
     </section>
 
-    <div class="w-full my-10">
-      <button
-        class="mx-auto px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] border border-[#DDDDDD] rounded-md text-gray-700"
+    <div class="w-full my-10 flex justify-center">
+      <a
+        v-smooth-scroll
+        href="#hero"
+        class="px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700"
       >
         <span>Back to top</span>
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
         </svg>
-      </button>
+      </a>
     </div>
   </div>
 </template>

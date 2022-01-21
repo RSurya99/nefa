@@ -55,16 +55,12 @@
             </ul>
           </div>
           <div :class="[open ? 'flex' : 'hidden lg:flex']" class="space-x-3">
-            <a
-              class="px-8 xl:px-10 py-3 mt-2 text-sm text-center bg-inherit text-gradient rounded-full border border-[#0c66ee]"
-              href="#"
-              >Login</a
-            >
-            <a
-              class="px-8 xl:px-10 py-3 mt-2 text-sm text-center bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white rounded-full"
-              href="#"
-              >Sign Up</a
-            >
+            <base-button class="px-8 xl:px-10 py-3 mt-2 bg-inherit text-gradient border border-[#0c66ee]">
+              Login
+            </base-button>
+            <base-button class="px-8 xl:px-10 py-3 mt-2 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white">
+              Sign Up
+            </base-button>
           </div>
         </div>
       </nav>
@@ -78,7 +74,9 @@
           <div class="w-full flex flex-wrap">
             <div class="w-full sm:w-1/2 xl:w-fit flex sm:px-6 py-12 space-x-10 sm:border-r border-[#DDDDDD]">
               <div class="hidden xl:block">
-                <img :src="require('~/assets/img/logo/nefa.svg')" class="w-24 -mt-2" alt="Nefa Logo" />
+                <a href="#">
+                  <img :src="require('~/assets/img/logo/nefa.svg')" class="w-24 -mt-2" alt="Nefa Logo" />
+                </a>
               </div>
               <ul class="space-y-4">
                 <NavLink name="Cryptocurrency" url="#" />
@@ -107,10 +105,8 @@
               </ul>
             </div>
             <div class="px-10 py-12 w-full sm:w-1/2 xl:w-[22rem] space-y-4">
-              <h5 class="text-sm text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline">
-                Newsletter
-              </h5>
-              <p class="text-sm text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline">
+              <h5 class="text-sm text-[#666666] focus:outline-none focus:shadow-outline">Newsletter</h5>
+              <p class="text-sm text-[#666666] focus:outline-none focus:shadow-outline">
                 Never miss anything crypto when you're on the go
               </p>
               <div class="flex items-center space-x-2">
@@ -119,7 +115,9 @@
                   class="w-full px-2 py-3 rounded-md text-sm focus:outline-none border border-[#AAAAAA] placeholder-[#888]"
                   placeholder="Enter your email"
                 />
-                <button class="bg-blue-gradient px-4 py-3 rounded-md text-white">
+                <button
+                  class="bg-blue-gradient px-4 py-3 rounded-md text-white hover:shadow-md transition duration-300"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5"
