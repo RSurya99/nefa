@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.transform-fade-down-enter-active,
+.transform-fade-down-leave-active {
+  @apply transition-all translate-y-0 duration-300;
+}
+.transform-fade-down-enter, .transform-fade-down-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  @apply opacity-0 transform -translate-y-2;
+}

@@ -2,7 +2,7 @@
   <div class="w-full">
     <!-- Hero section -->
     <section id="hero" class="w-full pb-24">
-      <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
+      <div class="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-20 space-y-6 px-6">
           <span class="text-base text-gradient font-semibold uppercase">Sign Up Today</span>
           <h1 class="text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10">
@@ -52,10 +52,10 @@
 
     <!-- Crypto statistic section -->
     <section
-      class="max-w-screen-xl mx-auto px-10 lg:px-0 py-6 sm:py-8 rounded-xl bg-white shadow-md transform lg:-translate-y-12"
+      class="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-0 py-6 sm:py-8 rounded-xl bg-white shadow-md transform lg:-translate-y-12"
     >
-      <div class="w-full flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-8">
-        <div class="w-1/3 overflow-hidden space-y-6 border-r border-gray-200 px-8">
+      <div class="w-full flex flex-col lg:flex-row items-center justify-center">
+        <div class="w-full lg:w-1/3 mt-6 lg:mt-0 overflow-hidden space-y-6 xl:border-r border-gray-200 lg:px-8">
           <div class="w-full flex items-center justify-between">
             <span class="font-medium">🔥 Trending</span>
             <a href="#" class="text-sm font-medium text-blue-500 flex items-center space-x-1">
@@ -127,7 +127,7 @@
             </div>
           </div>
         </div>
-        <div class="w-1/3 overflow-hidden space-y-6 border-r border-gray-200 px-8">
+        <div class="w-full lg:w-1/3 mt-6 lg:mt-0 overflow-hidden space-y-6 xl:border-r border-gray-200 lg:px-8">
           <div class="w-full flex items-center justify-between">
             <span class="font-medium">🚀 Top Gainers</span>
             <a href="#" class="text-sm font-medium text-blue-500 flex items-center space-x-1">
@@ -145,7 +145,7 @@
           </div>
           <div class="flex flex-col">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-              <div class="py-2 align-middle inline-block min-w-full overflow-hidden">
+              <div class="py-2 align-middle inline-block min-w-full px-6 overflow-hidden">
                 <table class="min-w-full">
                   <thead>
                     <tr>
@@ -203,7 +203,7 @@
             </div>
           </div>
         </div>
-        <div class="w-1/3 overflow-hidden space-y-6 px-8">
+        <div class="w-full lg:w-1/3 mt-6 xl:mt-0 overflow-hidden space-y-6 xl:border-r border-gray-200 lg:px-8">
           <div class="w-full flex items-center justify-between">
             <span class="font-medium">💎 Recently Added</span>
             <a href="#" class="text-sm font-medium text-blue-500 flex items-center space-x-1">
@@ -221,7 +221,7 @@
           </div>
           <div class="flex flex-col">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-              <div class="py-2 align-middle inline-block min-w-full overflow-hidden">
+              <div class="py-2 align-middle inline-block min-w-full px-6 overflow-hidden">
                 <table class="min-w-full">
                   <thead>
                     <tr>
@@ -280,7 +280,7 @@
 
     <!-- Buy and trade section -->
     <section class="w-full my-24">
-      <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
+      <div class="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div class="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4">
           <h2 class="text-4xl font-semibold sm:pr-8 xl:pr-12">
             Buy & trade on the<br />
@@ -289,9 +289,11 @@
           <p class="text-gray-700 tracking-wide leading-relaxed">
             Buy now and get 40% extra bonus Minimum pre-sale amount 25 Crypto Coin. We accept BTC crypto-currency
           </p>
-          <div class="space-y-6 pr-12">
-            <div class="flex items-center space-x-4">
-              <div class="max-w-[336px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
+          <div class="space-y-6 lg:pr-12">
+            <div class="flex flex-col sm:flex-wrap items-center space-y-2 sm:space-y-0 sm:space-x-4">
+              <div
+                class="lg:max-w-[336px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl"
+              >
                 <span class="text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> Amount </span>
                 <input
                   type="text"
@@ -300,20 +302,54 @@
                   value="5,000"
                 />
               </div>
-              <div
-                class="max-w-[159px] w-full flex items-center justify-center relative px-7 py-4 border border-[#0c66ee] rounded-xl"
-              >
-                <img :src="require('~/assets/img/country-icon/eng.png')" class="w-8" />
-                <select
-                  name="country"
-                  class="pr-7 text-sm font-medium border-none ring-0 focus:outline-none focus:ring-0"
+              <div class="relative w-full w-full sm:max-w-[159px]">
+                <button
+                  type="button"
+                  class="relative w-full flex items-center justify-center space-x-2 relative px-6 py-[1.35rem] border border-[#0c66ee] rounded-xl text-sm font-medium"
+                  @click="dropdownConcurency = !dropdownConcurency"
                 >
-                  <option value="USD">USD</option>
-                </select>
+                  <img
+                    :src="require('~/assets/img/country-icon/eng.png')"
+                    alt=""
+                    class="flex-shrink-0 h-6 w-6 rounded-full"
+                  />
+                  <span class="ml-3 block truncate">USD</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <ul
+                  v-if="dropdownConcurency"
+                  class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm border border-[#0c66ee]"
+                  tabindex="-1"
+                >
+                  <li
+                    id="listbox-option-0"
+                    class="text-gray-900 cursor-default select-none relative px-5 py-2"
+                    role="option"
+                  >
+                    <div class="flex items-center">
+                      <img
+                        :src="require('~/assets/img/country-icon/eng.png')"
+                        alt=""
+                        class="flex-shrink-0 h-6 w-6 rounded-full"
+                      />
+                      <span class="font-normal ml-3 block truncate"> USD </span>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="flex items-center space-x-4">
-              <div class="max-w-[336px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
+            <div class="flex flex-col sm:flex-wrap items-center space-y-2 sm:space-y-0 sm:space-x-4">
+              <div
+                class="lg:max-w-[336px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl"
+              >
                 <span class="text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> Get </span>
                 <input
                   type="text"
@@ -322,16 +358,48 @@
                   value="0.10901"
                 />
               </div>
-              <div
-                class="max-w-[159px] w-full flex items-center justify-center relative px-6 py-4 border border-[#0c66ee] rounded-xl"
-              >
-                <img :src="require('~/assets/img/crypto-icon/bitcoin.png')" class="w-8" />
-                <select
-                  name="country"
-                  class="pr-7 text-sm font-medium border-none ring-0 focus:outline-none focus:ring-0"
+              <div class="relative w-full w-full sm:max-w-[159px]">
+                <button
+                  type="button"
+                  class="relative w-full flex items-center justify-center space-x-2 relative px-6 py-[1.35rem] border border-[#0c66ee] rounded-xl text-sm font-medium"
+                  @click="dropdownCrypto = !dropdownCrypto"
                 >
-                  <option value="BTC">BTC</option>
-                </select>
+                  <img
+                    :src="require('~/assets/img/crypto-icon/bitcoin.png')"
+                    alt=""
+                    class="flex-shrink-0 h-6 w-6 rounded-full"
+                  />
+                  <span class="ml-3 block truncate">BTC</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <ul
+                  v-if="dropdownCrypto"
+                  class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm border border-[#0c66ee]"
+                  tabindex="-1"
+                >
+                  <li
+                    id="listbox-option-0"
+                    class="text-gray-900 cursor-default select-none relative px-5 py-2"
+                    role="option"
+                  >
+                    <div class="flex items-center">
+                      <img
+                        :src="require('~/assets/img/crypto-icon/bitcoin.png')"
+                        alt=""
+                        class="flex-shrink-0 h-6 w-6 rounded-full"
+                      />
+                      <span class="font-normal ml-3 block truncate"> BTC </span>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
             <base-button class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium"
@@ -341,31 +409,31 @@
         </div>
         <div class="col-span-12 lg:col-span-6">
           <div class="w-full">
-            <img :src="require('~/assets/img/buy-and-trade.png')" class="-mt-4" alt="" />
+            <img :src="require('~/assets/img/buy-and-trade.png')" class="mt-4 sm:-mt-4" alt="" />
           </div>
         </div>
       </div>
     </section>
 
     <!-- Partners section -->
-    <section class="bg-partner relative max-w-full mx-10 my-24 shadow rounded-2xl overflow-hidden">
-      <div class="w-full py-16 flex flex-col items-center justify-center space-y-4">
+    <section class="bg-partner relative max-w-full mx-6 sm:mx-10 my-24 shadow rounded-2xl overflow-hidden">
+      <div class="w-full py-16 flex flex-col items-center justify-center space-y-4 text-center">
         <h3 class="text-2xl text-neutral-800 font-semibold">Trusted Partners Worldwide</h3>
         <p class="text-gray-700 tracking-wide leading-relaxed">
           We're partners with countless major organisations around the globe
         </p>
-        <div class="flex items-center justify-center">
+        <div class="flex flex-wrap items-center justify-center">
           <div>
-            <img :src="require('~/assets/img/partner/clever.png')" class="w-72" alt="" />
+            <img :src="require('~/assets/img/partner/clever.png')" class="sm:w-1/2 lg:w-72 mx-auto" alt="" />
           </div>
           <div>
-            <img :src="require('~/assets/img/partner/diamon-cutts.png')" class="w-72" alt="" />
+            <img :src="require('~/assets/img/partner/diamon-cutts.png')" class="sm:w-1/2 lg:w-72 mx-auto" alt="" />
           </div>
           <div>
-            <img :src="require('~/assets/img/partner/swiss-finance.png')" class="w-72" alt="" />
+            <img :src="require('~/assets/img/partner/swiss-finance.png')" class="sm:w-1/2 lg:w-72 mx-auto" alt="" />
           </div>
           <div>
-            <img :src="require('~/assets/img/partner/gambio.png')" class="w-72" alt="" />
+            <img :src="require('~/assets/img/partner/gambio.png')" class="sm:w-1/2 lg:w-72 mx-auto" alt="" />
           </div>
         </div>
       </div>
@@ -373,7 +441,7 @@
 
     <!-- Credit card section -->
     <section class="w-full my-36">
-      <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
+      <div class="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div class="col-span-12 lg:col-span-7">
           <div class="w-full">
             <img :src="require('~/assets/img/nefa-cc.png')" class="w-[95%]" alt="" />
@@ -442,26 +510,26 @@
 
     <!-- Advanced trading tools section -->
     <section class="bg-trading-tools relative max-w-full mx-8 my-20 py-16 shadow rounded-2xl overflow-hidden">
-      <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
-        <div class="col-span-12 lg:col-span-6 space-y-6 px-6 mt-8">
+      <div class="relative max-w-screen-xl px-2 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
+        <div class="col-span-12 lg:col-span-6 space-y-4 xl:space-y-6 px-6 mt-8">
           <h2 class="text-4xl font-semibold">Advanced Trading <span class="text-header-gradient">Tools</span></h2>
           <div class="space-y-2">
             <h4 class="text-lg font-medium">Professional Access, Non-stop Availability</h4>
-            <p class="text-gray-700 tracking-wide leading-relaxed">
+            <p class="text-sm xl:text-base text-gray-700 tracking-wide xl:leading-relaxed">
               We provide premium access to crypto trading for both individuals and institutions through high liquidity,
               reliable order execution and constant uptime.
             </p>
           </div>
           <div class="space-y-2">
             <h4 class="text-lg font-medium">A Range of Powerful Apis</h4>
-            <p class="text-gray-700 tracking-wide leading-relaxed">
+            <p class="text-sm xl:text-base text-gray-700 tracking-wide xl:leading-relaxed">
               Set up your own trading interface or deploy your algorithmic strategy with our high-performance FIX and
               HTTP APIs. Connect to our WebSocket for real-time data streaming.
             </p>
           </div>
           <div class="space-y-2">
             <h4 class="text-lg font-medium">Customer Support</h4>
-            <p class="text-gray-700 tracking-wide leading-relaxed">
+            <p class="text-sm xl:text-base text-gray-700 tracking-wide xl:leading-relaxed">
               Premium 24/7 support available to all customers worldwide by phone or email. Dedicated account managers
               for partners.
             </p>
@@ -474,7 +542,7 @@
           </div>
         </div>
         <div class="col-span-12 lg:col-span-6">
-          <div class="w-full">
+          <div class="w-full sm:mt-20 xl:mt-0">
             <img :src="require('~/assets/img/advanced-trading-tools.png')" class="w-full" alt="" />
           </div>
         </div>
@@ -483,13 +551,13 @@
 
     <!-- Industry-leading security section -->
     <section class="w-full my-24">
-      <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
+      <div class="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div class="col-span-12 lg:col-span-6">
           <div class="w-full">
             <img :src="require('~/assets/img/industry-leading-security.png')" class="w-full" alt="" />
           </div>
         </div>
-        <div class="col-span-12 lg:col-span-5 space-y-6 mt-8 px-8">
+        <div class="col-span-12 lg:col-span-5 space-y-6 mt-8 xl:px-8">
           <h2 class="text-4xl font-semibold">Industry-leading security from day one</h2>
           <ul class="space-y-4">
             <li class="space-y-2">
@@ -562,11 +630,13 @@
     </section>
 
     <!-- Getting started section -->
-    <section class="bg-trading-tools relative max-w-full mx-10 my-24 shadow rounded-2xl overflow-hidden">
+    <section class="bg-trading-tools relative max-w-full mx-4 xl:mx-10 my-24 shadow rounded-2xl overflow-hidden">
       <div class="w-full py-16 flex flex-col items-center">
         <h2 class="text-4xl font-semibold text-center">Get started in just a few minutes</h2>
-        <div class="relative w-full flex items-center justify-between px-10 mt-8">
-          <div class="max-w-[363px] space-y-3 text-center">
+        <div
+          class="relative w-full flex flex-col lg:flex-row items-center justify-between space-y-2 lg:space-y-0 px-4 xl:px-10 mt-8"
+        >
+          <div class="max-w-[280px] xl:max-w-[363px] space-y-3 text-center">
             <img :src="require('~/assets/img/getting-started/sign-up.png')" class="max-w-[245px] mx-auto" alt="" />
             <h3 class="text-xl text-neutral-800 font-semibold">Sign Up</h3>
             <p class="text-sm text-gray-700 leading-relaxed">
@@ -574,14 +644,14 @@
               profile
             </p>
           </div>
-          <div class="max-w-[363px] space-y-3 text-center">
+          <div class="max-w-[280px] xl:max-w-[363px] space-y-3 text-center">
             <img :src="require('~/assets/img/getting-started/fund.png')" class="max-w-[245px] mx-auto" alt="" />
             <h3 class="text-xl text-neutral-800 font-semibold">Fund</h3>
             <p class="text-sm text-gray-700 leading-relaxed">
               Choose your preferred payment method such as bank transfer or credit card to top up your NEFA Wallet
             </p>
           </div>
-          <div class="max-w-[363px] space-y-3 text-center">
+          <div class="max-w-[280px] xl:max-w-[363px] space-y-3 text-center">
             <img :src="require('~/assets/img/getting-started/buy-crypto.png')" class="max-w-[245px] mx-auto" alt="" />
             <h3 class="text-xl text-neutral-800 font-semibold">Buy Crypto</h3>
             <p class="text-sm text-gray-700 leading-relaxed">
@@ -591,12 +661,12 @@
           </div>
           <img
             :src="require('~/assets/img/getting-started/arrow.png')"
-            class="absolute top-32 left-[22rem] w-[9.5rem]"
+            class="hidden lg:inline-block absolute top-32 left-64 xl:left-[22rem] w-24 xl:w-[9.5rem]"
             alt=""
           />
           <img
             :src="require('~/assets/img/getting-started/arrow.png')"
-            class="absolute top-32 right-[22rem] w-[9.5rem]"
+            class="hidden lg:inline-block absolute top-32 right-64 xl:right-[22rem] w-24 xl:w-[9.5rem]"
             alt=""
           />
         </div>
@@ -605,7 +675,7 @@
 
     <!-- FAQ section -->
     <section class="w-full my-24">
-      <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
+      <div class="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div class="col-span-12 lg:col-span-6">
           <div class="w-full">
             <img :src="require('~/assets/img/faq.png')" class="w-full" alt="" />
@@ -810,6 +880,8 @@ export default {
   data() {
     return {
       selected: 0,
+      dropdownConcurency: false,
+      dropdownCrypto: false,
       trendings: [
         {
           id: 1,
@@ -923,16 +995,15 @@ export default {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.bg-partner,
-.bg-trading-tools {
+.bg-partner {
+  background: url('../assets/img/partner/background.png');
   background-size: cover;
   background-position: center;
 }
-.bg-partner {
-  background: url('../assets/img/partner/background.png');
-}
 .bg-trading-tools {
   background: url('../assets/img/bg-trading-tools.png');
+  background-size: cover;
+  background-position: center;
 }
 .max-h-0 {
   max-height: 0;
