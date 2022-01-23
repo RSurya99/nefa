@@ -12,11 +12,11 @@
             Buy and sell 200+ cryptocurrencies with 20+ flat currencies using bank transfers or your credit/debit card.
           </p>
           <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2">
-            <base-button class="w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white"
+            <base-button class="max-w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white"
               >Get Started</base-button
             >
             <base-button
-              class="w-full px-6 py-4 bg-inherit text-gradient border border-[#0c66ee] flex items-center justify-center"
+              class="max-w-full px-6 py-4 bg-inherit text-gradient border border-[#0c66ee] flex items-center justify-center"
             >
               <span>Download App</span>
               <ChevronDownIcon :size="20" class="mt-1 text-[#0c66ee]" />
