@@ -8,7 +8,7 @@ Free landing page template built using Nuxt 2 and Tailwindcss 3
 
 ## Project Structure
 
-.
+.  
 ├── assets
 │ ├── css
 │ └── img

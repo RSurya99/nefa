@@ -3,19 +3,21 @@
     <!-- Hero section -->
     <section id="hero" class="w-full pb-24">
       <div class="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
-        <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-20 space-y-6 px-6">
+        <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-20 space-y-4 sm:space-y-6 px-6">
           <span class="text-base text-gradient font-semibold uppercase">Sign Up Today</span>
-          <h1 class="text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10">
+          <h1 class="text-4xl sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10">
             The World's <span class="text-header-gradient">Fastest Growing</span> Crypto Web App
           </h1>
           <p class="text-gray-700 tracking-wide leading-relaxed">
             Buy and sell 200+ cryptocurrencies with 20+ flat currencies using bank transfers or your credit/debit card.
           </p>
-          <div class="flex space-x-4 mt-2">
-            <base-button class="px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white"
+          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2">
+            <base-button class="w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white"
               >Get Started</base-button
             >
-            <base-button class="px-6 py-4 bg-inherit text-gradient border border-[#0c66ee] flex items-center">
+            <base-button
+              class="w-full px-6 py-4 bg-inherit text-gradient border border-[#0c66ee] flex items-center justify-center"
+            >
               <span>Download App</span>
               <ChevronDownIcon :size="20" class="mt-1 text-[#0c66ee]" />
             </base-button>
@@ -37,14 +39,14 @@
         <img :src="require('~/assets/img/pattern/ellipse-3.png')" class="absolute bottom-56 right-24 w-6" />
         <img
           :src="require('~/assets/img/pattern/star.png')"
-          class="absolute top-28 right-16 lg:right-0 lg:left-[30rem] w-8"
+          class="absolute top-20 sm:top-28 right-16 lg:right-0 lg:left-[30rem] w-8"
         />
       </div>
     </section>
 
     <!-- Crypto statistic section -->
     <section
-      class="max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-0 py-6 sm:py-8 rounded-xl bg-white shadow-md transform lg:-translate-y-12"
+      class="max-w-screen-xl mx-auto px-4 sm:px-6 sm:px-10 lg:px-0 py-6 sm:py-8 rounded-xl bg-white shadow-md transform lg:-translate-y-12"
     >
       <div class="w-full flex flex-col lg:flex-row items-center justify-center">
         <div class="w-full lg:w-1/3 mt-6 lg:mt-0 overflow-hidden space-y-6 xl:border-r border-gray-200 lg:px-8">
@@ -57,7 +59,7 @@
           </div>
           <div class="flex flex-col">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-              <div class="py-2 align-middle inline-block min-w-full px-6 overflow-hidden">
+              <div class="px-2 sm:px-6 py-2 align-middle inline-block min-w-full overflow-hidden">
                 <table class="min-w-full">
                   <thead>
                     <tr>
@@ -103,7 +105,7 @@
           </div>
           <div class="flex flex-col">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-              <div class="py-2 align-middle inline-block min-w-full px-6 overflow-hidden">
+              <div class="py-2 align-middle inline-block min-w-full px-2 sm:px-6 overflow-hidden">
                 <table class="min-w-full">
                   <thead>
                     <tr>
@@ -153,7 +155,7 @@
           </div>
           <div class="flex flex-col">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-              <div class="py-2 align-middle inline-block min-w-full px-6 overflow-hidden">
+              <div class="py-2 align-middle inline-block min-w-full px-2 sm:px-6 overflow-hidden">
                 <table class="min-w-full">
                   <thead>
                     <tr>
@@ -197,7 +199,7 @@
       <div class="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div class="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4">
           <h2 class="text-4xl font-semibold sm:pr-8 xl:pr-12">
-            Buy & trade on the<br />
+            Buy & trade on the <br class="hidden sm:block" />
             original crypto exchange.
           </h2>
           <p class="text-gray-700 tracking-wide leading-relaxed">
@@ -378,9 +380,9 @@
     </section>
 
     <!-- Advanced trading tools section -->
-    <section class="bg-trading-tools relative max-w-full mx-8 my-20 py-16 shadow rounded-2xl overflow-hidden">
+    <section class="bg-trading-tools relative max-w-full mx-4 sm:mx-8 my-20 py-16 shadow rounded-2xl overflow-hidden">
       <div class="relative max-w-screen-xl px-2 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
-        <div class="col-span-12 lg:col-span-6 space-y-4 xl:space-y-6 px-6 mt-8">
+        <div class="col-span-12 lg:col-span-6 space-y-4 xl:space-y-6 px-2 sm:px-6 mt-8">
           <h2 class="text-4xl font-semibold">Advanced Trading <span class="text-header-gradient">Tools</span></h2>
           <div class="space-y-2">
             <h4 class="text-lg font-medium">Professional Access, Non-stop Availability</h4>
