@@ -46,5 +46,5 @@ $ yarn generate
 
 Use it for learn, but please don’t republish, redistribute, or resell the template.
 
-Code by [rsurya99](https://github.com/rsurya99)
+Code by [rsurya99](https://github.com/rsurya99)  
 UI/UX by [irvanmoses](https://www.facebook.com/irvan.moses)
