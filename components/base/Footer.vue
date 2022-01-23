@@ -46,15 +46,7 @@
               placeholder="Enter your email"
             />
             <button class="bg-blue-gradient px-4 py-3 rounded-md text-white hover:shadow-md transition duration-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
+              <ArrowRightIcon :size="20" />
             </button>
           </div>
         </div>

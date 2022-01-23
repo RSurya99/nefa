@@ -7,20 +7,8 @@
             <img :src="require('~/assets/img/logo/nefa.svg')" class="w-24 xl:w-28" alt="Nefa Logo" />
           </div>
           <button class="rounded-lg lg:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
-            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-              <path
-                v-if="!open"
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-              <path
-                v-if="open"
-                fill-rule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
+            <SegmentIcon v-if="!open" :size="24" />
+            <CloseIcon v-else :size="24" />
           </button>
         </div>
         <ul
@@ -38,28 +26,8 @@
               @click="dropdownNavbar = !dropdownNavbar"
             >
               <span>Products</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  v-if="dropdownNavbar"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 15l7-7 7 7"
-                />
-                <path
-                  v-else-if="!dropdownNavbar"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
+              <ChevronUpIcon v-if="dropdownNavbar" :size="16" />
+              <ChevronDownIcon v-else :size="16" />
             </button>
             <transition name="transform-fade-down">
               <ul

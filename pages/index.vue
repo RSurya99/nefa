@@ -15,17 +15,9 @@
             <base-button class="px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white"
               >Get Started</base-button
             >
-            <base-button class="px-6 py-4 bg-inherit text-gradient border border-[#0c66ee] flex items-center space-x-1">
+            <base-button class="px-6 py-4 bg-inherit text-gradient border border-[#0c66ee] flex items-center">
               <span>Download App</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-3 h-3 text-[#0c66ee]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
+              <ChevronDownIcon :size="20" class="mt-1 text-[#0c66ee]" />
             </base-button>
           </div>
         </div>
@@ -60,15 +52,7 @@
             <span class="font-medium">🔥 Trending</span>
             <a href="#" class="text-sm font-medium text-blue-500 flex items-center space-x-1">
               <span>More</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRightIcon :size="16" />
             </a>
           </div>
           <div class="flex flex-col">
@@ -92,26 +76,8 @@
                       </td>
                       <td class="py-4 whitespace-nowrap">
                         <div class="flex items-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4"
-                            :class="[trending.increase ? 'text-emerald-500' : 'text-red-500']"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              v-if="trending.increase"
-                              fill-rule="evenodd"
-                              d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-                              clip-rule="evenodd"
-                            />
-                            <path
-                              v-else-if="!trending.increase"
-                              fill-rule="evenodd"
-                              d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
+                          <PlusThickIcon v-if="trending.increase" :size="14" class="text-emerald-500" />
+                          <MinusThickIcon v-else :size="14" class="text-red-500" />
                           <span>${{ trending.price }}</span>
                         </div>
                       </td>
@@ -132,15 +98,7 @@
             <span class="font-medium">🚀 Top Gainers</span>
             <a href="#" class="text-sm font-medium text-blue-500 flex items-center space-x-1">
               <span>More</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRightIcon :size="16" />
             </a>
           </div>
           <div class="flex flex-col">
@@ -164,26 +122,8 @@
                       </td>
                       <td class="py-4 whitespace-nowrap">
                         <div class="flex items-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4"
-                            :class="[topGainer.increase ? 'text-emerald-500' : 'text-red-500']"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              v-if="topGainer.increase"
-                              fill-rule="evenodd"
-                              d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-                              clip-rule="evenodd"
-                            />
-                            <path
-                              v-else-if="!topGainer.increase"
-                              fill-rule="evenodd"
-                              d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
+                          <PlusThickIcon v-if="topGainer.increase" :size="14" class="text-emerald-500" />
+                          <MinusThickIcon v-else :size="14" class="text-red-500" />
                           <span>${{ topGainer.price }}</span>
                         </div>
                       </td>
@@ -208,15 +148,7 @@
             <span class="font-medium">💎 Recently Added</span>
             <a href="#" class="text-sm font-medium text-blue-500 flex items-center space-x-1">
               <span>More</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRightIcon :size="16" />
             </a>
           </div>
           <div class="flex flex-col">
@@ -240,26 +172,8 @@
                       </td>
                       <td class="py-4 whitespace-nowrap">
                         <div class="flex items-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4"
-                            :class="[recent.increase ? 'text-emerald-500' : 'text-red-500']"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              v-if="recent.increase"
-                              fill-rule="evenodd"
-                              d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-                              clip-rule="evenodd"
-                            />
-                            <path
-                              v-else-if="!recent.increase"
-                              fill-rule="evenodd"
-                              d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
+                          <PlusThickIcon v-if="recent.increase" :size="14" class="text-emerald-500" />
+                          <MinusThickIcon v-else :size="14" class="text-red-500" />
                           <span>${{ recent.price }}</span>
                         </div>
                       </td>
@@ -290,7 +204,7 @@
             Buy now and get 40% extra bonus Minimum pre-sale amount 25 Crypto Coin. We accept BTC crypto-currency
           </p>
           <div class="space-y-6 lg:pr-12">
-            <div class="flex flex-col sm:flex-wrap items-center space-y-2 sm:space-y-0 sm:space-x-4">
+            <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
               <div
                 class="lg:max-w-[336px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl"
               >
@@ -314,39 +228,33 @@
                     class="flex-shrink-0 h-6 w-6 rounded-full"
                   />
                   <span class="ml-3 block truncate">USD</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-4 h-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
+                  <ChevronDownIcon :size="20" />
                 </button>
-                <ul
-                  v-if="dropdownConcurency"
-                  class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm border border-[#0c66ee]"
-                  tabindex="-1"
-                >
-                  <li
-                    id="listbox-option-0"
-                    class="text-gray-900 cursor-default select-none relative px-5 py-2"
-                    role="option"
+                <transition name="transform-fade-down">
+                  <ul
+                    v-if="dropdownConcurency"
+                    class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm border border-[#0c66ee]"
+                    tabindex="-1"
                   >
-                    <div class="flex items-center">
-                      <img
-                        :src="require('~/assets/img/country-icon/eng.png')"
-                        alt=""
-                        class="flex-shrink-0 h-6 w-6 rounded-full"
-                      />
-                      <span class="font-normal ml-3 block truncate"> USD </span>
-                    </div>
-                  </li>
-                </ul>
+                    <li
+                      id="listbox-option-0"
+                      class="text-gray-900 cursor-default select-none relative px-5 py-2"
+                      role="option"
+                    >
+                      <div class="flex items-center">
+                        <img
+                          :src="require('~/assets/img/country-icon/eng.png')"
+                          alt=""
+                          class="flex-shrink-0 h-6 w-6 rounded-full"
+                        />
+                        <span class="font-normal ml-3 block truncate"> USD </span>
+                      </div>
+                    </li>
+                  </ul>
+                </transition>
               </div>
             </div>
-            <div class="flex flex-col sm:flex-wrap items-center space-y-2 sm:space-y-0 sm:space-x-4">
+            <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
               <div
                 class="lg:max-w-[336px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl"
               >
@@ -370,36 +278,30 @@
                     class="flex-shrink-0 h-6 w-6 rounded-full"
                   />
                   <span class="ml-3 block truncate">BTC</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="w-4 h-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                  </svg>
+                  <ChevronDownIcon :size="20" />
                 </button>
-                <ul
-                  v-if="dropdownCrypto"
-                  class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm border border-[#0c66ee]"
-                  tabindex="-1"
-                >
-                  <li
-                    id="listbox-option-0"
-                    class="text-gray-900 cursor-default select-none relative px-5 py-2"
-                    role="option"
+                <transition name="transform-fade-down">
+                  <ul
+                    v-if="dropdownCrypto"
+                    class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm border border-[#0c66ee]"
+                    tabindex="-1"
                   >
-                    <div class="flex items-center">
-                      <img
-                        :src="require('~/assets/img/crypto-icon/bitcoin.png')"
-                        alt=""
-                        class="flex-shrink-0 h-6 w-6 rounded-full"
-                      />
-                      <span class="font-normal ml-3 block truncate"> BTC </span>
-                    </div>
-                  </li>
-                </ul>
+                    <li
+                      id="listbox-option-0"
+                      class="text-gray-900 cursor-default select-none relative px-5 py-2"
+                      role="option"
+                    >
+                      <div class="flex items-center">
+                        <img
+                          :src="require('~/assets/img/crypto-icon/bitcoin.png')"
+                          alt=""
+                          class="flex-shrink-0 h-6 w-6 rounded-full"
+                        />
+                        <span class="font-normal ml-3 block truncate"> BTC </span>
+                      </div>
+                    </li>
+                  </ul>
+                </transition>
               </div>
             </div>
             <base-button class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium"
@@ -456,48 +358,15 @@
           </p>
           <ul class="space-y-2">
             <li class="flex items-center space-x-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 text-[#0c66ee]"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              <CheckCircleIcon :size="20" class="text-[#0c66ee]" />
               <span>Up to 3% back on purchases</span>
             </li>
             <li class="flex items-center space-x-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 text-[#0c66ee]"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              <CheckCircleIcon :size="20" class="text-[#0c66ee]" />
               <span>Earn rewards in bitcoin or any crypto on NEFA</span>
             </li>
             <li class="flex items-center space-x-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 text-[#0c66ee]"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              <CheckCircleIcon :size="20" class="text-[#0c66ee]" />
               <span>No annual fee</span>
             </li>
           </ul>
@@ -562,18 +431,7 @@
           <ul class="space-y-4">
             <li class="space-y-2">
               <div class="flex items-center space-x-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 text-[#0c66ee]"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+                <CheckCircleIcon :size="20" class="text-[#0c66ee]" />
                 <span>Safety, security and compliance</span>
               </div>
               <p class="text-sm text-gray-700 leading-relaxed">
@@ -584,18 +442,7 @@
             </li>
             <li class="space-y-2">
               <div class="flex items-center space-x-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 text-[#0c66ee]"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+                <CheckCircleIcon :size="20" class="text-[#0c66ee]" />
                 <span>Hardware security keys</span>
               </div>
               <p class="text-sm text-gray-700 leading-relaxed">
@@ -604,18 +451,7 @@
             </li>
             <li class="space-y-2">
               <div class="flex items-center space-x-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 text-[#0c66ee]"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+                <CheckCircleIcon :size="20" class="text-[#0c66ee]" />
                 <span>SOC Certifications</span>
               </div>
               <p class="text-sm text-gray-700 leading-relaxed">
@@ -686,174 +522,7 @@
           <h2 class="text-4xl font-semibold mb-6">Frequently asked questions</h2>
 
           <ul class="shadow-box">
-            <li class="relative border-b-2 border-gray-200">
-              <button type="button" class="w-full py-4 text-left" @click="selected = !selected">
-                <div class="flex items-center justify-between">
-                  <span class="font-medium">Why should I choose NEFA?</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      v-if="selected"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 15l7-7 7 7"
-                    />
-                    <path
-                      v-else-if="!selected"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-              </button>
-
-              <transition name="slide">
-                <div v-if="selected" class="relative overflow-hidden transition-all duration-700" style="">
-                  <div class="py-2">
-                    <p class="text-sm text-gray-700 tracking-wide leading-relaxed">
-                      We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated
-                      more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries.
-                      Today, we're trusted by over 8 million customers around the world and have received praise for our
-                      easy-to-use app, secure wallet, and range of features.
-                    </p>
-                  </div>
-                </div>
-              </transition>
-            </li>
-            <li class="relative border-b-2 border-gray-200">
-              <button type="button" class="w-full py-4 text-left" @click="selected = !selected">
-                <div class="flex items-center justify-between">
-                  <span class="font-medium">How secure is NEFA?</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      v-if="selected"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 15l7-7 7 7"
-                    />
-                    <path
-                      v-else-if="!selected"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-              </button>
-
-              <transition name="slide">
-                <div v-if="selected" class="relative overflow-hidden transition-all duration-700" style="">
-                  <div class="py-2">
-                    <p class="text-sm text-gray-700 tracking-wide leading-relaxed">
-                      We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated
-                      more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries.
-                      Today, we're trusted by over 8 million customers around the world and have received praise for our
-                      easy-to-use app, secure wallet, and range of features.
-                    </p>
-                  </div>
-                </div>
-              </transition>
-            </li>
-            <li class="relative border-b-2 border-gray-200">
-              <button type="button" class="w-full py-4 text-left" @click="selected = !selected">
-                <div class="flex items-center justify-between">
-                  <span class="font-medium">Do I have to buy a whole Bitcoin?</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      v-if="selected"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 15l7-7 7 7"
-                    />
-                    <path
-                      v-else-if="!selected"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-              </button>
-
-              <transition name="slide">
-                <div v-if="selected" class="relative overflow-hidden transition-all duration-700" style="">
-                  <div class="py-2">
-                    <p class="text-sm text-gray-700 tracking-wide leading-relaxed">
-                      We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated
-                      more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries.
-                      Today, we're trusted by over 8 million customers around the world and have received praise for our
-                      easy-to-use app, secure wallet, and range of features.
-                    </p>
-                  </div>
-                </div>
-              </transition>
-            </li>
-            <li class="relative border-b-2 border-gray-200">
-              <button type="button" class="w-full py-4 text-left" @click="selected = !selected">
-                <div class="flex items-center justify-between">
-                  <span class="font-medium">How do I actually buy Bitcoin?</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      v-if="selected"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 15l7-7 7 7"
-                    />
-                    <path
-                      v-else-if="!selected"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-              </button>
-
-              <transition name="slide">
-                <div v-if="selected" class="relative overflow-hidden transition-all duration-700" style="">
-                  <div class="py-2">
-                    <p class="text-sm text-gray-700 tracking-wide leading-relaxed">
-                      We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated
-                      more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries.
-                      Today, we're trusted by over 8 million customers around the world and have received praise for our
-                      easy-to-use app, secure wallet, and range of features.
-                    </p>
-                  </div>
-                </div>
-              </transition>
-            </li>
+            <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" />
           </ul>
         </div>
       </div>
@@ -866,9 +535,7 @@
         class="px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700"
       >
         <span>Back to top</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
-        </svg>
+        <ArrowUpIcon :size="20" />
       </a>
     </div>
   </div>
@@ -984,6 +651,28 @@ export default {
           data: [35, 30, 60, 50, 35, 45, 40],
         },
       ],
+      accordions: [
+        {
+          title: 'Why should I choose NEFA?',
+          description:
+            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over 8 million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+        },
+        {
+          title: 'How secure is NEFA?',
+          description:
+            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+        },
+        {
+          title: 'Do I have to buy a whole Bitcoin?',
+          description:
+            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+        },
+        {
+          title: 'How do I actually buy Bitcoin?',
+          description:
+            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+        },
+      ],
     }
   },
 }
@@ -1006,40 +695,6 @@ export default {
   background-position: center;
 }
 .max-h-0 {
-  max-height: 0;
-}
-
-.slide-enter-active {
-  -moz-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -moz-transition-timing-function: ease-in;
-  -webkit-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
-}
-
-.slide-leave-active {
-  -moz-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-  -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-  -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-}
-
-.slide-enter-to,
-.slide-leave {
-  max-height: 100px;
-  overflow: hidden;
-}
-
-.slide-enter,
-.slide-leave-to {
-  overflow: hidden;
   max-height: 0;
 }
 </style>

@@ -19,7 +19,7 @@ export default {
     ],
   },
   css: ['@/assets/css/main.css'],
-  plugins: ['@/plugins/smooth-scroll.js'],
+  plugins: ['~/plugins/smooth-scroll.js', '~/plugins/mdi.js'],
   components: true,
   buildModules: ['@nuxtjs/eslint-module', '@nuxt/postcss8'],
   modules: [],
@@ -31,5 +31,7 @@ export default {
       },
     },
   },
+  /**
   buildDir: 'nuxt-dist',
+   */
 }
