@@ -143,7 +143,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full lg:w-1/3 mt-6 xl:mt-0 overflow-hidden space-y-6 xl:border-r border-gray-200 lg:px-8">
+        <div class="w-full lg:w-1/3 mt-6 xl:mt-0 overflow-hidden space-y-6 lg:px-8">
           <div class="w-full flex items-center justify-between">
             <span class="font-medium">💎 Recently Added</span>
             <a href="#" class="text-sm font-medium text-blue-500 flex items-center space-x-1">
