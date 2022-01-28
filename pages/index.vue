@@ -2,7 +2,7 @@
   <div class="w-full">
     <!-- Hero section -->
     <section id="hero" class="w-full pb-24">
-      <div class="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
+      <BaseSection>
         <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-20 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
           <span class="text-base text-gradient font-semibold uppercase">Sign Up Today</span>
           <h1 class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10">
@@ -12,16 +12,17 @@
             Buy and sell 200+ cryptocurrencies with 20+ flat currencies using bank transfers or your credit/debit card.
           </p>
           <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2">
-            <base-button
+            <BaseButton
               class="max-w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] border border-[#0c66ee] text-white"
-              >Get Started</base-button
             >
-            <base-button
+              Get Started
+            </BaseButton>
+            <BaseButton
               class="max-w-full px-6 py-4 bg-inherit text-gradient border border-[#0c66ee] flex items-center justify-center"
             >
               <span>Download App</span>
               <ChevronDownIcon :size="20" class="mt-1 text-[#0c66ee]" />
-            </base-button>
+            </BaseButton>
           </div>
         </div>
         <div class="hidden sm:block col-span-12 lg:col-span-6">
@@ -29,23 +30,8 @@
             <img :src="require('~/assets/img/hero-image.png')" class="-mt-4" alt="" />
           </div>
         </div>
-        <img
-          :src="require('~/assets/img/pattern/ellipse-1.png')"
-          class="hidden sm:block absolute bottom-12 xl:bottom-16 left-4 xl:left-0 w-6"
-        />
-        <img
-          :src="require('~/assets/img/pattern/ellipse-2.png')"
-          class="hidden sm:block absolute top-4 sm:top-10 right-64 sm:right-96 xl:right-[32rem] w-6"
-        />
-        <img
-          :src="require('~/assets/img/pattern/ellipse-3.png')"
-          class="hidden sm:block absolute bottom-56 right-24 w-6"
-        />
-        <img
-          :src="require('~/assets/img/pattern/star.png')"
-          class="hidden sm:block absolute top-20 sm:top-28 right-16 lg:right-0 lg:left-[30rem] w-8"
-        />
-      </div>
+        <BaseHeroPattern />
+      </BaseSection>
     </section>
 
     <!-- Crypto statistic section -->
@@ -53,159 +39,20 @@
       class="max-w-screen-xl mx-2 sm:mx-auto px-4 sm:px-6 sm:px-10 lg:px-0 py-6 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md transform lg:-translate-y-12"
     >
       <div class="w-full flex flex-col lg:flex-row items-center justify-center">
-        <div class="w-full lg:w-1/3 mt-6 lg:mt-0 overflow-hidden space-y-6 xl:border-r border-gray-200 lg:px-8">
-          <div class="w-full flex items-center justify-between">
-            <span class="font-medium">🔥 Trending</span>
-            <a href="#" class="text-sm font-medium text-blue-500 flex items-center space-x-1">
-              <span>More</span>
-              <ChevronRightIcon :size="16" />
-            </a>
-          </div>
-          <div class="flex flex-col">
-            <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-              <div class="px-2 sm:px-6 py-2 align-middle inline-block min-w-full overflow-hidden">
-                <table class="min-w-full">
-                  <thead>
-                    <tr>
-                      <th class="text-left text-sm font-medium text-gray-500">Name</th>
-                      <th class="text-left text-sm font-medium text-gray-500">Price</th>
-                      <th class="hidden sm:block text-left text-sm font-medium text-gray-500">Chart</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="trending in trendings" :key="trending.id" class="border-b border-gray-200">
-                      <td class="py-4 whitespace-nowrap">
-                        <div class="flex items-center space-x-2">
-                          <img :src="require(`~/assets/img/crypto-icon/${trending.logo}`)" alt="" />
-                          <span>{{ trending.name }}</span>
-                        </div>
-                      </td>
-                      <td class="py-4 whitespace-nowrap">
-                        <div class="flex items-center">
-                          <PlusThickIcon v-if="trending.increase" :size="14" class="text-emerald-500" />
-                          <MinusThickIcon v-else :size="14" class="text-red-500" />
-                          <span>${{ trending.price }}</span>
-                        </div>
-                      </td>
-                      <td class="hidden sm:block whitespace-nowrap">
-                        <div>
-                          <LineChart class="w-28 h-12 -mx-2" :datasets="trending.data" :increase="trending.increase" />
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="w-full lg:w-1/3 mt-6 lg:mt-0 overflow-hidden space-y-6 xl:border-r border-gray-200 lg:px-8">
-          <div class="w-full flex items-center justify-between">
-            <span class="font-medium">🚀 Top Gainers</span>
-            <a href="#" class="text-sm font-medium text-blue-500 flex items-center space-x-1">
-              <span>More</span>
-              <ChevronRightIcon :size="16" />
-            </a>
-          </div>
-          <div class="flex flex-col">
-            <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-              <div class="py-2 align-middle inline-block min-w-full px-2 sm:px-6 overflow-hidden">
-                <table class="min-w-full">
-                  <thead>
-                    <tr>
-                      <th class="text-left text-sm font-medium text-gray-500">Name</th>
-                      <th class="text-left text-sm font-medium text-gray-500">Price</th>
-                      <th class="hidden sm:block text-left text-sm font-medium text-gray-500">Chart</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="topGainer in topGainers" :key="topGainer.id" class="border-b border-gray-200">
-                      <td class="py-4 whitespace-nowrap">
-                        <div class="flex items-center space-x-2">
-                          <img :src="require(`~/assets/img/crypto-icon/${topGainer.logo}`)" alt="" />
-                          <span>{{ topGainer.name }}</span>
-                        </div>
-                      </td>
-                      <td class="py-4 whitespace-nowrap">
-                        <div class="flex items-center">
-                          <PlusThickIcon v-if="topGainer.increase" :size="14" class="text-emerald-500" />
-                          <MinusThickIcon v-else :size="14" class="text-red-500" />
-                          <span>${{ topGainer.price }}</span>
-                        </div>
-                      </td>
-                      <td class="hidden sm:block whitespace-nowrap">
-                        <div>
-                          <LineChart
-                            class="w-28 h-12 -mx-2"
-                            :datasets="topGainer.data"
-                            :increase="topGainer.increase"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="w-full lg:w-1/3 mt-6 xl:mt-0 overflow-hidden space-y-6 lg:px-8">
-          <div class="w-full flex items-center justify-between">
-            <span class="font-medium">💎 Recently Added</span>
-            <a href="#" class="text-sm font-medium text-blue-500 flex items-center space-x-1">
-              <span>More</span>
-              <ChevronRightIcon :size="16" />
-            </a>
-          </div>
-          <div class="flex flex-col">
-            <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-              <div class="py-2 align-middle inline-block min-w-full px-2 sm:px-6 overflow-hidden">
-                <table class="min-w-full">
-                  <thead>
-                    <tr>
-                      <th class="text-left text-sm font-medium text-gray-500">Name</th>
-                      <th class="text-left text-sm font-medium text-gray-500">Price</th>
-                      <th class="hidden sm:block text-left text-sm font-medium text-gray-500">Chart</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="recent in recents" :key="recent.id" class="border-b border-gray-200">
-                      <td class="py-4 whitespace-nowrap">
-                        <div class="flex items-center space-x-2">
-                          <img :src="require(`~/assets/img/crypto-icon/${recent.logo}`)" alt="" />
-                          <span>{{ recent.name }}</span>
-                        </div>
-                      </td>
-                      <td class="py-4 whitespace-nowrap">
-                        <div class="flex items-center">
-                          <PlusThickIcon v-if="recent.increase" :size="14" class="text-emerald-500" />
-                          <MinusThickIcon v-else :size="14" class="text-red-500" />
-                          <span>${{ recent.price }}</span>
-                        </div>
-                      </td>
-                      <td class="hidden sm:block whitespace-nowrap">
-                        <div>
-                          <LineChart class="w-28 h-12 -mx-2" :datasets="recent.data" :increase="recent.increase" />
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
+        <LandingCryptoStatistic title="🔥 Trending" :datasets="trendings" class="xl:border-r border-gray-200 lg:px-8" />
+        <LandingCryptoStatistic
+          title="🚀 Top Gainers"
+          :datasets="topGainers"
+          class="xl:border-r border-gray-200 lg:px-8"
+        />
+        <LandingCryptoStatistic title="💎 Recently Added" :datasets="recents" class="lg:px-8" />
       </div>
     </section>
 
     <!-- Buy and trade section -->
     <section class="w-full my-24">
-      <div class="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
-        <div class="sm:hidden mb-8 col-span-12 lg:col-span-6">
-          <div class="w-full">
-            <img :src="require('~/assets/img/buy-and-trade.png')" class="mt-4 sm:-mt-4" alt="" />
-          </div>
-        </div>
+      <BaseSection>
+        <LandingBuyTradeImage class="sm:hidden mb-8" />
         <div class="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4">
           <h2 class="text-4xl font-semibold sm:pr-8 xl:pr-12">
             Buy & trade on the <br class="hidden sm:block" />
@@ -215,117 +62,23 @@
             Buy now and get 40% extra bonus Minimum pre-sale amount 25 Crypto Coin. We accept BTC crypto-currency
           </p>
           <div class="space-y-6 lg:pr-12">
-            <div class="flex items-center space-x-4">
-              <div
-                class="lg:max-w-[336px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl"
-              >
-                <span class="text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> Amount </span>
-                <input
-                  type="text"
-                  class="w-full text-lg font-medium text-right border-none ring-0 focus:outline-none focus:ring-0"
-                  name="url"
-                  value="5,000"
-                />
-              </div>
-              <div class="relative w-full max-w-[106px] sm:max-w-[159px]">
-                <button
-                  type="button"
-                  class="relative w-full flex items-center justify-center space-x-1 relative sm:px-6 py-[1.35rem] border border-[#0c66ee] rounded-xl text-sm font-medium"
-                  @click="dropdownConcurency = !dropdownConcurency"
-                >
-                  <img
-                    :src="require('~/assets/img/country-icon/eng.png')"
-                    alt=""
-                    class="flex-shrink-0 h-6 w-6 rounded-full"
-                  />
-                  <span class="ml-3 block truncate">USD</span>
-                  <ChevronDownIcon :size="20" />
-                </button>
-                <transition name="transform-fade-down">
-                  <ul
-                    v-if="dropdownConcurency"
-                    class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm border border-[#0c66ee]"
-                    tabindex="-1"
-                  >
-                    <li
-                      id="listbox-option-0"
-                      class="text-gray-900 cursor-default select-none relative px-3 sm:px-5 py-2"
-                      role="option"
-                    >
-                      <div class="flex items-center">
-                        <img
-                          :src="require('~/assets/img/country-icon/eng.png')"
-                          alt=""
-                          class="flex-shrink-0 h-6 w-6 rounded-full"
-                        />
-                        <span class="font-normal ml-3 block truncate"> USD </span>
-                      </div>
-                    </li>
-                  </ul>
-                </transition>
-              </div>
-            </div>
-            <div class="flex items-center space-x-4">
-              <div
-                class="lg:max-w-[336px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl"
-              >
-                <span class="text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> Get </span>
-                <input
-                  type="text"
-                  class="w-full text-lg font-medium text-right border-none ring-0 focus:outline-none focus:ring-0"
-                  name="url"
-                  value="0.10901"
-                />
-              </div>
-              <div class="relative w-full max-w-[106px] sm:max-w-[159px]">
-                <button
-                  type="button"
-                  class="relative w-full flex items-center justify-center space-x-2 relative sm:px-6 py-[1.35rem] border border-[#0c66ee] rounded-xl text-sm font-medium"
-                  @click="dropdownCrypto = !dropdownCrypto"
-                >
-                  <img
-                    :src="require('~/assets/img/crypto-icon/bitcoin.png')"
-                    alt=""
-                    class="flex-shrink-0 h-6 w-6 rounded-full"
-                  />
-                  <span class="ml-3 block truncate">BTC</span>
-                  <ChevronDownIcon :size="20" />
-                </button>
-                <transition name="transform-fade-down">
-                  <ul
-                    v-if="dropdownCrypto"
-                    class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm border border-[#0c66ee]"
-                    tabindex="-1"
-                  >
-                    <li
-                      id="listbox-option-0"
-                      class="text-gray-900 cursor-default select-none relative px-3 sm:px-5 py-2"
-                      role="option"
-                    >
-                      <div class="flex items-center">
-                        <img
-                          :src="require('~/assets/img/crypto-icon/bitcoin.png')"
-                          alt=""
-                          class="flex-shrink-0 h-6 w-6 rounded-full"
-                        />
-                        <span class="font-normal ml-3 block truncate"> BTC </span>
-                      </div>
-                    </li>
-                  </ul>
-                </transition>
-              </div>
-            </div>
-            <base-button class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium"
-              >Buy Now</base-button
-            >
+            <LandingExchange
+              name="Amount"
+              value="5.000"
+              :exchange-selected="currencySelected"
+              :exchanges="currencies"
+            />
+            <LandingExchange
+              name="Get"
+              value="0.10901"
+              :exchange-selected="cryptoSelected"
+              :exchanges="cryptocurrencies"
+            />
+            <BaseButton class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">Buy Now</BaseButton>
           </div>
         </div>
-        <div class="hidden sm:block col-span-12 lg:col-span-6">
-          <div class="w-full">
-            <img :src="require('~/assets/img/buy-and-trade.png')" class="mt-4 sm:-mt-4" alt="" />
-          </div>
-        </div>
-      </div>
+        <LandingBuyTradeImage class="hidden sm:block" />
+      </BaseSection>
     </section>
 
     <!-- Partners section -->
@@ -336,25 +89,19 @@
           We're partners with countless major organisations around the globe
         </p>
         <div class="flex flex-wrap items-center justify-center">
-          <div>
-            <img :src="require('~/assets/img/partner/clever.png')" class="sm:w-1/2 lg:w-72 mx-auto" alt="" />
-          </div>
-          <div>
-            <img :src="require('~/assets/img/partner/diamon-cutts.png')" class="sm:w-1/2 lg:w-72 mx-auto" alt="" />
-          </div>
-          <div>
-            <img :src="require('~/assets/img/partner/swiss-finance.png')" class="sm:w-1/2 lg:w-72 mx-auto" alt="" />
-          </div>
-          <div>
-            <img :src="require('~/assets/img/partner/gambio.png')" class="sm:w-1/2 lg:w-72 mx-auto" alt="" />
-          </div>
+          <LandingPartnerImage
+            v-for="img in ['clever.png', 'diamon-cutts.png', 'swiss-finance.png', 'gambio.png']"
+            :key="img"
+            :img="img"
+          />
         </div>
       </div>
     </section>
+    <!-- WORK IS UNTIL HERE -->
 
     <!-- Credit card section -->
     <section class="w-full my-36">
-      <div class="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
+      <BaseSection>
         <div class="col-span-12 lg:col-span-7">
           <div class="w-full">
             <img :src="require('~/assets/img/nefa-cc.png')" class="w-[95%]" alt="" />
@@ -381,12 +128,12 @@
               <span>No annual fee</span>
             </li>
           </ul>
-          <base-button
+          <BaseButton
             class="w-full sm:max-w-[240px] px-10 py-4 bg-inherit text-gradient border border-[#0c66ee] text-base"
-            >Join the waitlist</base-button
+            >Join the waitlist</BaseButton
           >
         </div>
-      </div>
+      </BaseSection>
     </section>
 
     <!-- Advanced trading tools section -->
@@ -423,8 +170,8 @@
             </p>
           </div>
           <div class="flex flex-col sm:flex-row">
-            <base-button class="px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base"
-              >Get Started</base-button
+            <BaseButton class="px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base"
+              >Get Started</BaseButton
             >
             <button class="bg-inherit text-[#4A8FF6] px-10 py-4 text-center underline rounded-full">Learn More</button>
           </div>
@@ -530,7 +277,7 @@
 
     <!-- FAQ section -->
     <section class="w-full my-24">
-      <div class="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
+      <BaseSection>
         <div class="col-span-12 lg:col-span-6">
           <div class="w-full">
             <img :src="require('~/assets/img/faq.png')" class="w-full" alt="" />
@@ -544,7 +291,7 @@
             <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" />
           </ul>
         </div>
-      </div>
+      </BaseSection>
     </section>
 
     <div class="w-full my-10 flex justify-center">
@@ -568,6 +315,26 @@ export default {
       selected: 0,
       dropdownConcurency: false,
       dropdownCrypto: false,
+      currencySelected: {
+        img: 'country-icon/eng.png',
+        name: 'USD',
+      },
+      currencies: [
+        {
+          img: 'country-icon/eng.png',
+          name: 'USD',
+        },
+      ],
+      cryptoSelected: {
+        img: 'crypto-icon/bitcoin.png',
+        name: 'BTC',
+      },
+      cryptocurrecies: [
+        {
+          img: 'crypto-icon/bitcoin.png',
+          name: 'BTC',
+        },
+      ],
       trendings: [
         {
           id: 1,
