@@ -3,16 +3,17 @@
     <!-- Hero section -->
     <section id="hero" class="w-full pb-24">
       <div class="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
-        <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-20 space-y-4 sm:space-y-6 px-6">
+        <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-20 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
           <span class="text-base text-gradient font-semibold uppercase">Sign Up Today</span>
-          <h1 class="text-4xl sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10">
+          <h1 class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10">
             The World's <span class="text-header-gradient">Fastest Growing</span> Crypto Web App
           </h1>
-          <p class="text-gray-700 tracking-wide leading-relaxed">
+          <p class="hidden sm:block text-gray-700 tracking-wide leading-relaxed">
             Buy and sell 200+ cryptocurrencies with 20+ flat currencies using bank transfers or your credit/debit card.
           </p>
           <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2">
-            <base-button class="max-w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white"
+            <base-button
+              class="max-w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] border border-[#0c66ee] text-white"
               >Get Started</base-button
             >
             <base-button
@@ -23,30 +24,33 @@
             </base-button>
           </div>
         </div>
-        <div class="col-span-12 lg:col-span-6">
+        <div class="hidden sm:block col-span-12 lg:col-span-6">
           <div class="w-full">
             <img :src="require('~/assets/img/hero-image.png')" class="-mt-4" alt="" />
           </div>
         </div>
         <img
           :src="require('~/assets/img/pattern/ellipse-1.png')"
-          class="absolute bottom-12 xl:bottom-16 left-4 xl:left-0 w-6"
+          class="hidden sm:block absolute bottom-12 xl:bottom-16 left-4 xl:left-0 w-6"
         />
         <img
           :src="require('~/assets/img/pattern/ellipse-2.png')"
-          class="absolute top-4 sm:top-10 right-64 sm:right-96 xl:right-[32rem] w-6"
+          class="hidden sm:block absolute top-4 sm:top-10 right-64 sm:right-96 xl:right-[32rem] w-6"
         />
-        <img :src="require('~/assets/img/pattern/ellipse-3.png')" class="absolute bottom-56 right-24 w-6" />
+        <img
+          :src="require('~/assets/img/pattern/ellipse-3.png')"
+          class="hidden sm:block absolute bottom-56 right-24 w-6"
+        />
         <img
           :src="require('~/assets/img/pattern/star.png')"
-          class="absolute top-20 sm:top-28 right-16 lg:right-0 lg:left-[30rem] w-8"
+          class="hidden sm:block absolute top-20 sm:top-28 right-16 lg:right-0 lg:left-[30rem] w-8"
         />
       </div>
     </section>
 
     <!-- Crypto statistic section -->
     <section
-      class="max-w-screen-xl mx-auto px-4 sm:px-6 sm:px-10 lg:px-0 py-6 sm:py-8 rounded-xl bg-white shadow-md transform lg:-translate-y-12"
+      class="max-w-screen-xl mx-2 sm:mx-auto px-4 sm:px-6 sm:px-10 lg:px-0 py-6 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md transform lg:-translate-y-12"
     >
       <div class="w-full flex flex-col lg:flex-row items-center justify-center">
         <div class="w-full lg:w-1/3 mt-6 lg:mt-0 overflow-hidden space-y-6 xl:border-r border-gray-200 lg:px-8">
@@ -65,7 +69,7 @@
                     <tr>
                       <th class="text-left text-sm font-medium text-gray-500">Name</th>
                       <th class="text-left text-sm font-medium text-gray-500">Price</th>
-                      <th class="text-left text-sm font-medium text-gray-500">Chart</th>
+                      <th class="hidden sm:block text-left text-sm font-medium text-gray-500">Chart</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -83,7 +87,7 @@
                           <span>${{ trending.price }}</span>
                         </div>
                       </td>
-                      <td class="whitespace-nowrap">
+                      <td class="hidden sm:block whitespace-nowrap">
                         <div>
                           <LineChart class="w-28 h-12 -mx-2" :datasets="trending.data" :increase="trending.increase" />
                         </div>
@@ -111,7 +115,7 @@
                     <tr>
                       <th class="text-left text-sm font-medium text-gray-500">Name</th>
                       <th class="text-left text-sm font-medium text-gray-500">Price</th>
-                      <th class="text-left text-sm font-medium text-gray-500">Chart</th>
+                      <th class="hidden sm:block text-left text-sm font-medium text-gray-500">Chart</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -129,7 +133,7 @@
                           <span>${{ topGainer.price }}</span>
                         </div>
                       </td>
-                      <td class="whitespace-nowrap">
+                      <td class="hidden sm:block whitespace-nowrap">
                         <div>
                           <LineChart
                             class="w-28 h-12 -mx-2"
@@ -161,7 +165,7 @@
                     <tr>
                       <th class="text-left text-sm font-medium text-gray-500">Name</th>
                       <th class="text-left text-sm font-medium text-gray-500">Price</th>
-                      <th class="text-left text-sm font-medium text-gray-500">Chart</th>
+                      <th class="hidden sm:block text-left text-sm font-medium text-gray-500">Chart</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -179,7 +183,7 @@
                           <span>${{ recent.price }}</span>
                         </div>
                       </td>
-                      <td class="whitespace-nowrap">
+                      <td class="hidden sm:block whitespace-nowrap">
                         <div>
                           <LineChart class="w-28 h-12 -mx-2" :datasets="recent.data" :increase="recent.increase" />
                         </div>
@@ -197,6 +201,11 @@
     <!-- Buy and trade section -->
     <section class="w-full my-24">
       <div class="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
+        <div class="sm:hidden mb-8 col-span-12 lg:col-span-6">
+          <div class="w-full">
+            <img :src="require('~/assets/img/buy-and-trade.png')" class="mt-4 sm:-mt-4" alt="" />
+          </div>
+        </div>
         <div class="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4">
           <h2 class="text-4xl font-semibold sm:pr-8 xl:pr-12">
             Buy & trade on the <br class="hidden sm:block" />
@@ -206,7 +215,7 @@
             Buy now and get 40% extra bonus Minimum pre-sale amount 25 Crypto Coin. We accept BTC crypto-currency
           </p>
           <div class="space-y-6 lg:pr-12">
-            <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+            <div class="flex items-center space-x-4">
               <div
                 class="lg:max-w-[336px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl"
               >
@@ -218,10 +227,10 @@
                   value="5,000"
                 />
               </div>
-              <div class="relative w-full w-full sm:max-w-[159px]">
+              <div class="relative w-full max-w-[106px] sm:max-w-[159px]">
                 <button
                   type="button"
-                  class="relative w-full flex items-center justify-center space-x-2 relative px-6 py-[1.35rem] border border-[#0c66ee] rounded-xl text-sm font-medium"
+                  class="relative w-full flex items-center justify-center space-x-1 relative sm:px-6 py-[1.35rem] border border-[#0c66ee] rounded-xl text-sm font-medium"
                   @click="dropdownConcurency = !dropdownConcurency"
                 >
                   <img
@@ -240,7 +249,7 @@
                   >
                     <li
                       id="listbox-option-0"
-                      class="text-gray-900 cursor-default select-none relative px-5 py-2"
+                      class="text-gray-900 cursor-default select-none relative px-3 sm:px-5 py-2"
                       role="option"
                     >
                       <div class="flex items-center">
@@ -256,7 +265,7 @@
                 </transition>
               </div>
             </div>
-            <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+            <div class="flex items-center space-x-4">
               <div
                 class="lg:max-w-[336px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl"
               >
@@ -268,10 +277,10 @@
                   value="0.10901"
                 />
               </div>
-              <div class="relative w-full w-full sm:max-w-[159px]">
+              <div class="relative w-full max-w-[106px] sm:max-w-[159px]">
                 <button
                   type="button"
-                  class="relative w-full flex items-center justify-center space-x-2 relative px-6 py-[1.35rem] border border-[#0c66ee] rounded-xl text-sm font-medium"
+                  class="relative w-full flex items-center justify-center space-x-2 relative sm:px-6 py-[1.35rem] border border-[#0c66ee] rounded-xl text-sm font-medium"
                   @click="dropdownCrypto = !dropdownCrypto"
                 >
                   <img
@@ -290,7 +299,7 @@
                   >
                     <li
                       id="listbox-option-0"
-                      class="text-gray-900 cursor-default select-none relative px-5 py-2"
+                      class="text-gray-900 cursor-default select-none relative px-3 sm:px-5 py-2"
                       role="option"
                     >
                       <div class="flex items-center">
@@ -311,7 +320,7 @@
             >
           </div>
         </div>
-        <div class="col-span-12 lg:col-span-6">
+        <div class="hidden sm:block col-span-12 lg:col-span-6">
           <div class="w-full">
             <img :src="require('~/assets/img/buy-and-trade.png')" class="mt-4 sm:-mt-4" alt="" />
           </div>
@@ -320,8 +329,8 @@
     </section>
 
     <!-- Partners section -->
-    <section class="bg-partner relative max-w-full mx-6 sm:mx-10 my-24 shadow rounded-2xl overflow-hidden">
-      <div class="w-full py-16 flex flex-col items-center justify-center space-y-4 text-center">
+    <section class="bg-partner relative max-w-full sm:mx-6 sm:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
+      <div class="w-full px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
         <h3 class="text-2xl text-neutral-800 font-semibold">Trusted Partners Worldwide</h3>
         <p class="text-gray-700 tracking-wide leading-relaxed">
           We're partners with countless major organisations around the globe
@@ -351,14 +360,14 @@
             <img :src="require('~/assets/img/nefa-cc.png')" class="w-[95%]" alt="" />
           </div>
         </div>
-        <div class="col-span-12 lg:col-span-5 space-y-6 px-6 mt-20">
+        <div class="col-span-12 lg:col-span-5 space-y-6 px-4 sm:px-6 mt-20">
           <h2 class="text-4xl font-semibold">
             Introducing the <span class="text-header-gradient">NEFA</span> Credit Card
           </h2>
           <p class="text-gray-700 tracking-wide leading-relaxed">
             Subject to cardholder and rewards terms which will be available at application.
           </p>
-          <ul class="space-y-2">
+          <ul class="space-y-4 sm:space-y-2">
             <li class="flex items-center space-x-2">
               <CheckCircleIcon :size="20" class="text-[#0c66ee]" />
               <span>Up to 3% back on purchases</span>
@@ -372,7 +381,8 @@
               <span>No annual fee</span>
             </li>
           </ul>
-          <base-button class="px-10 py-4 bg-inherit text-gradient border border-[#0c66ee] text-base"
+          <base-button
+            class="w-full sm:max-w-[240px] px-10 py-4 bg-inherit text-gradient border border-[#0c66ee] text-base"
             >Join the waitlist</base-button
           >
         </div>
@@ -380,9 +390,16 @@
     </section>
 
     <!-- Advanced trading tools section -->
-    <section class="bg-trading-tools relative max-w-full mx-4 sm:mx-8 my-20 py-16 shadow rounded-2xl overflow-hidden">
-      <div class="relative max-w-screen-xl px-2 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
-        <div class="col-span-12 lg:col-span-6 space-y-4 xl:space-y-6 px-2 sm:px-6 mt-8">
+    <section
+      class="bg-trading-tools relative max-w-full sm:mx-4 sm:mx-8 my-20 py-16 shadow rounded-2xl overflow-hidden"
+    >
+      <div class="relative max-w-screen-xl px-4 sm:px-2 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
+        <div class="sm:hidden col-span-12 lg:col-span-6">
+          <div class="w-full sm:mt-20 xl:mt-0">
+            <img :src="require('~/assets/img/advanced-trading-tools.png')" class="w-full" alt="" />
+          </div>
+        </div>
+        <div class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8">
           <h2 class="text-4xl font-semibold">Advanced Trading <span class="text-header-gradient">Tools</span></h2>
           <div class="space-y-2">
             <h4 class="text-lg font-medium">Professional Access, Non-stop Availability</h4>
@@ -405,14 +422,14 @@
               for partners.
             </p>
           </div>
-          <div>
+          <div class="flex flex-col sm:flex-row">
             <base-button class="px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base"
               >Get Started</base-button
             >
             <button class="bg-inherit text-[#4A8FF6] px-10 py-4 text-center underline rounded-full">Learn More</button>
           </div>
         </div>
-        <div class="col-span-12 lg:col-span-6">
+        <div class="hidden sm:block col-span-12 lg:col-span-6">
           <div class="w-full sm:mt-20 xl:mt-0">
             <img :src="require('~/assets/img/advanced-trading-tools.png')" class="w-full" alt="" />
           </div>
@@ -422,15 +439,15 @@
 
     <!-- Industry-leading security section -->
     <section class="w-full my-24">
-      <div class="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
+      <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div class="col-span-12 lg:col-span-6">
           <div class="w-full">
             <img :src="require('~/assets/img/industry-leading-security.png')" class="w-full" alt="" />
           </div>
         </div>
-        <div class="col-span-12 lg:col-span-5 space-y-6 mt-8 xl:px-8">
+        <div class="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
           <h2 class="text-4xl font-semibold">Industry-leading security from day one</h2>
-          <ul class="space-y-4">
+          <ul class="space-y-8 sm:space-y-4">
             <li class="space-y-2">
               <div class="flex items-center space-x-2">
                 <CheckCircleIcon :size="20" class="text-[#0c66ee]" />
@@ -468,13 +485,13 @@
     </section>
 
     <!-- Getting started section -->
-    <section class="bg-trading-tools relative max-w-full mx-4 xl:mx-10 my-24 shadow rounded-2xl overflow-hidden">
+    <section class="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div class="w-full py-16 flex flex-col items-center">
-        <h2 class="text-4xl font-semibold text-center">Get started in just a few minutes</h2>
+        <h2 class="text-3xl sm:text-4xl font-semibold text-center">Get started in just a few minutes</h2>
         <div
-          class="relative w-full flex flex-col lg:flex-row items-center justify-between space-y-2 lg:space-y-0 px-4 xl:px-10 mt-8"
+          class="relative w-full flex flex-col lg:flex-row items-center justify-between space-y-12 lg:space-y-0 px-4 xl:px-10 mt-16 sm:mt-8"
         >
-          <div class="max-w-[280px] xl:max-w-[363px] space-y-3 text-center">
+          <div class="max-w-[280px] xl:max-w-[363px] space-y-6 sm:space-y-3 text-center">
             <img :src="require('~/assets/img/getting-started/sign-up.png')" class="max-w-[245px] mx-auto" alt="" />
             <h3 class="text-xl text-neutral-800 font-semibold">Sign Up</h3>
             <p class="text-sm text-gray-700 leading-relaxed">
@@ -482,14 +499,14 @@
               profile
             </p>
           </div>
-          <div class="max-w-[280px] xl:max-w-[363px] space-y-3 text-center">
+          <div class="max-w-[280px] xl:max-w-[363px] space-y-6 sm:space-y-3 text-center">
             <img :src="require('~/assets/img/getting-started/fund.png')" class="max-w-[245px] mx-auto" alt="" />
             <h3 class="text-xl text-neutral-800 font-semibold">Fund</h3>
             <p class="text-sm text-gray-700 leading-relaxed">
               Choose your preferred payment method such as bank transfer or credit card to top up your NEFA Wallet
             </p>
           </div>
-          <div class="max-w-[280px] xl:max-w-[363px] space-y-3 text-center">
+          <div class="max-w-[280px] xl:max-w-[363px] space-y-6 sm:space-y-3 text-center">
             <img :src="require('~/assets/img/getting-started/buy-crypto.png')" class="max-w-[245px] mx-auto" alt="" />
             <h3 class="text-xl text-neutral-800 font-semibold">Buy Crypto</h3>
             <p class="text-sm text-gray-700 leading-relaxed">
@@ -519,9 +536,9 @@
             <img :src="require('~/assets/img/faq.png')" class="w-full" alt="" />
           </div>
         </div>
-        <div class="col-span-12 lg:col-span-6 px-6 mt-8">
-          <span class="text-base text-gradient font-semibold uppercase mb-2">Support</span>
-          <h2 class="text-4xl font-semibold mb-6">Frequently asked questions</h2>
+        <div class="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
+          <span class="text-base text-gradient font-semibold uppercase mb-4 sm:mb-2">Support</span>
+          <h2 class="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6">Frequently asked questions</h2>
 
           <ul class="shadow-box">
             <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" />
