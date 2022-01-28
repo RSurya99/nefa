@@ -8,7 +8,7 @@
           <h1 class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10">
             The World's <span class="text-header-gradient">Fastest Growing</span> Crypto Web App
           </h1>
-          <p class="hidden sm:block text-gray-700 tracking-wide leading-relaxed">
+          <p class="paragraph hidden sm:block">
             Buy and sell 200+ cryptocurrencies with 20+ flat currencies using bank transfers or your credit/debit card.
           </p>
           <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2">
@@ -58,7 +58,7 @@
             Buy & trade on the <br class="hidden sm:block" />
             original crypto exchange.
           </h2>
-          <p class="text-gray-700 tracking-wide leading-relaxed">
+          <p class="paragraph">
             Buy now and get 40% extra bonus Minimum pre-sale amount 25 Crypto Coin. We accept BTC crypto-currency
           </p>
           <div class="space-y-6 lg:pr-12">
@@ -85,9 +85,7 @@
     <section class="bg-partner relative max-w-full sm:mx-6 sm:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div class="w-full px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
         <h3 class="text-2xl text-neutral-800 font-semibold">Trusted Partners Worldwide</h3>
-        <p class="text-gray-700 tracking-wide leading-relaxed">
-          We're partners with countless major organisations around the globe
-        </p>
+        <p class="paragraph">We're partners with countless major organisations around the globe</p>
         <div class="flex flex-wrap items-center justify-center">
           <LandingPartnerImage
             v-for="img in ['clever.png', 'diamon-cutts.png', 'swiss-finance.png', 'gambio.png']"
@@ -97,7 +95,6 @@
         </div>
       </div>
     </section>
-    <!-- WORK IS UNTIL HERE -->
 
     <!-- Credit card section -->
     <section class="w-full my-36">
@@ -111,22 +108,11 @@
           <h2 class="text-4xl font-semibold">
             Introducing the <span class="text-header-gradient">NEFA</span> Credit Card
           </h2>
-          <p class="text-gray-700 tracking-wide leading-relaxed">
-            Subject to cardholder and rewards terms which will be available at application.
-          </p>
+          <p class="paragraph">Subject to cardholder and rewards terms which will be available at application.</p>
           <ul class="space-y-4 sm:space-y-2">
-            <li class="flex items-center space-x-2">
-              <CheckCircleIcon :size="20" class="text-[#0c66ee]" />
-              <span>Up to 3% back on purchases</span>
-            </li>
-            <li class="flex items-center space-x-2">
-              <CheckCircleIcon :size="20" class="text-[#0c66ee]" />
-              <span>Earn rewards in bitcoin or any crypto on NEFA</span>
-            </li>
-            <li class="flex items-center space-x-2">
-              <CheckCircleIcon :size="20" class="text-[#0c66ee]" />
-              <span>No annual fee</span>
-            </li>
+            <LandingListItem title="Up to 3% back on purchases" />
+            <LandingListItem title="Earn rewards in bitcoin or any crypto on NEFA" />
+            <LandingListItem title="No annual fee" />
           </ul>
           <BaseButton
             class="w-full sm:max-w-[240px] px-10 py-4 bg-inherit text-gradient border border-[#0c66ee] text-base"
@@ -141,46 +127,40 @@
       class="bg-trading-tools relative max-w-full sm:mx-4 sm:mx-8 my-20 py-16 shadow rounded-2xl overflow-hidden"
     >
       <div class="relative max-w-screen-xl px-4 sm:px-2 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
-        <div class="sm:hidden col-span-12 lg:col-span-6">
-          <div class="w-full sm:mt-20 xl:mt-0">
-            <img :src="require('~/assets/img/advanced-trading-tools.png')" class="w-full" alt="" />
-          </div>
-        </div>
+        <LandingTradingToolImage class="sm:hidden" />
         <div class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8">
           <h2 class="text-4xl font-semibold">Advanced Trading <span class="text-header-gradient">Tools</span></h2>
           <div class="space-y-2">
             <h4 class="text-lg font-medium">Professional Access, Non-stop Availability</h4>
-            <p class="text-sm xl:text-base text-gray-700 tracking-wide xl:leading-relaxed">
+            <p class="paragraph text-sm xl:text-base">
               We provide premium access to crypto trading for both individuals and institutions through high liquidity,
               reliable order execution and constant uptime.
             </p>
           </div>
           <div class="space-y-2">
             <h4 class="text-lg font-medium">A Range of Powerful Apis</h4>
-            <p class="text-sm xl:text-base text-gray-700 tracking-wide xl:leading-relaxed">
+            <p class="paragraph text-sm xl:text-base">
               Set up your own trading interface or deploy your algorithmic strategy with our high-performance FIX and
               HTTP APIs. Connect to our WebSocket for real-time data streaming.
             </p>
           </div>
           <div class="space-y-2">
             <h4 class="text-lg font-medium">Customer Support</h4>
-            <p class="text-sm xl:text-base text-gray-700 tracking-wide xl:leading-relaxed">
+            <p class="paragraph text-sm xl:text-base">
               Premium 24/7 support available to all customers worldwide by phone or email. Dedicated account managers
               for partners.
             </p>
           </div>
           <div class="flex flex-col sm:flex-row">
-            <BaseButton class="px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base"
-              >Get Started</BaseButton
-            >
-            <button class="bg-inherit text-[#4A8FF6] px-10 py-4 text-center underline rounded-full">Learn More</button>
+            <BaseButton class="px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base">
+              Get Started
+            </BaseButton>
+            <BaseButton class="bg-inherit text-[#4A8FF6] px-10 py-4 text-center underline rounded-full">
+              Learn More
+            </BaseButton>
           </div>
         </div>
-        <div class="hidden sm:block col-span-12 lg:col-span-6">
-          <div class="w-full sm:mt-20 xl:mt-0">
-            <img :src="require('~/assets/img/advanced-trading-tools.png')" class="w-full" alt="" />
-          </div>
-        </div>
+        <LandingTradingToolImage class="hidden sm:block" />
       </div>
     </section>
 
@@ -195,37 +175,25 @@
         <div class="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
           <h2 class="text-4xl font-semibold">Industry-leading security from day one</h2>
           <ul class="space-y-8 sm:space-y-4">
-            <li class="space-y-2">
-              <div class="flex items-center space-x-2">
-                <CheckCircleIcon :size="20" class="text-[#0c66ee]" />
-                <span>Safety, security and compliance</span>
-              </div>
+            <LandingListItem title="Safety, security and compliance">
               <p class="text-sm text-gray-700 leading-relaxed">
                 NEFA is a licensed New York trust company that undergoes regular bank exams and is subject to the
                 cybersecurity audits conducted by the New York Department of Financial Services.
                 <span class="underline">Learn more</span> about our commitment to security.
               </p>
-            </li>
-            <li class="space-y-2">
-              <div class="flex items-center space-x-2">
-                <CheckCircleIcon :size="20" class="text-[#0c66ee]" />
-                <span>Hardware security keys</span>
-              </div>
+            </LandingListItem>
+            <LandingListItem title="Hardware security keys">
               <p class="text-sm text-gray-700 leading-relaxed">
                 With NEFA you can secure your account with a hardware security key via WebAuthn.
               </p>
-            </li>
-            <li class="space-y-2">
-              <div class="flex items-center space-x-2">
-                <CheckCircleIcon :size="20" class="text-[#0c66ee]" />
-                <span>SOC Certifications</span>
-              </div>
+            </LandingListItem>
+            <LandingListItem title="SOC Certifications">
               <p class="text-sm text-gray-700 leading-relaxed">
                 NEFA is <span class="underline">SOC 1 Type 2</span> and
                 <span class="underline">SOC 2 Type 2</span> compliant. We are the world’s first cryptocurrency exchange
                 and custodian to complete these exams.
               </p>
-            </li>
+            </LandingListItem>
           </ul>
         </div>
       </div>
@@ -238,29 +206,7 @@
         <div
           class="relative w-full flex flex-col lg:flex-row items-center justify-between space-y-12 lg:space-y-0 px-4 xl:px-10 mt-16 sm:mt-8"
         >
-          <div class="max-w-[280px] xl:max-w-[363px] space-y-6 sm:space-y-3 text-center">
-            <img :src="require('~/assets/img/getting-started/sign-up.png')" class="max-w-[245px] mx-auto" alt="" />
-            <h3 class="text-xl text-neutral-800 font-semibold">Sign Up</h3>
-            <p class="text-sm text-gray-700 leading-relaxed">
-              Sign up for your free NEFA Wallet on web, iOS or Android and follow our easy process to set up your
-              profile
-            </p>
-          </div>
-          <div class="max-w-[280px] xl:max-w-[363px] space-y-6 sm:space-y-3 text-center">
-            <img :src="require('~/assets/img/getting-started/fund.png')" class="max-w-[245px] mx-auto" alt="" />
-            <h3 class="text-xl text-neutral-800 font-semibold">Fund</h3>
-            <p class="text-sm text-gray-700 leading-relaxed">
-              Choose your preferred payment method such as bank transfer or credit card to top up your NEFA Wallet
-            </p>
-          </div>
-          <div class="max-w-[280px] xl:max-w-[363px] space-y-6 sm:space-y-3 text-center">
-            <img :src="require('~/assets/img/getting-started/buy-crypto.png')" class="max-w-[245px] mx-auto" alt="" />
-            <h3 class="text-xl text-neutral-800 font-semibold">Buy Crypto</h3>
-            <p class="text-sm text-gray-700 leading-relaxed">
-              Buy Bitcoin or Ethereum, then securely store it in your Wallet or send it on easily to your friends
-              anywhere
-            </p>
-          </div>
+          <LandingStep v-for="step in steps" :key="step.title" :step="step" />
           <img
             :src="require('~/assets/img/getting-started/arrow.png')"
             class="hidden lg:inline-block absolute top-32 left-64 xl:left-[22rem] w-24 xl:w-[9.5rem]"
@@ -329,7 +275,7 @@ export default {
         img: 'crypto-icon/bitcoin.png',
         name: 'BTC',
       },
-      cryptocurrecies: [
+      cryptocurrencies: [
         {
           img: 'crypto-icon/bitcoin.png',
           name: 'BTC',
@@ -457,6 +403,26 @@ export default {
           title: 'How do I actually buy Bitcoin?',
           description:
             "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+        },
+      ],
+      steps: [
+        {
+          img: 'sign-up.png',
+          title: 'Sign Up',
+          description:
+            'Sign up for your free NEFA Wallet on web, iOS or Android and follow our easy process to set up your profile',
+        },
+        {
+          img: 'fund.png',
+          title: 'Fund',
+          description:
+            'Choose your preferred payment method such as bank transfer or credit card to top up your NEFA Wallet',
+        },
+        {
+          img: 'buy-crypto.png',
+          title: 'Buy Crypto',
+          description:
+            'Buy Bitcoin or Ethereum, then securely store it in your Wallet or send it on easily to your friends anywhere',
         },
       ],
     }
