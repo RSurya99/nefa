@@ -9,3 +9,7 @@
 .transform-fade-down-enter, .transform-fade-down-leave-to /* .fade-leave-active below version 2.1.8 */ {
   @apply opacity-0 transform -translate-y-2;
 }
+
+.paragraph {
+  @apply text-gray-700 tracking-wide leading-relaxed;
+}

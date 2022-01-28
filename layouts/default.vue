@@ -81,8 +81,4 @@ export default {
   overflow: hidden;
   max-height: 0;
 }
-
-.paragraph {
-  @apply text-gray-700 tracking-wide leading-relaxed;
-}
 </style>
