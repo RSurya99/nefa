@@ -1,11 +1,15 @@
 <template>
   <div class="w-full">
     <!-- Hero section -->
-    <section id="hero" class="w-full pb-24">
+    <section id="hero" class="w-full pb-24" data-aos="fade-down">
       <BaseSection>
         <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-20 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
           <span class="text-base text-gradient font-semibold uppercase">Sign Up Today</span>
-          <h1 class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10">
+          <h1
+            data-aos="fade-right"
+            data-aos-once="true"
+            class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10"
+          >
             The World's <span class="text-header-gradient">Fastest Growing</span> Crypto Web App
           </h1>
           <p class="paragraph hidden sm:block">
@@ -254,8 +258,10 @@
 </template>
 
 <script>
+import aosMixin from '@/mixins/aos'
 export default {
   name: 'IndexPage',
+  mixins: [aosMixin],
   data() {
     return {
       selected: 0,
