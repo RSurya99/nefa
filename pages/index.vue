@@ -1,10 +1,12 @@
 <template>
   <div class="w-full">
     <!-- Hero section -->
-    <section id="hero" class="w-full pb-24" data-aos="fade-down">
+    <section id="hero" class="w-full pb-24">
       <BaseSection>
-        <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-20 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
-          <span class="text-base text-gradient font-semibold uppercase">Sign Up Today</span>
+        <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
+          <span data-aos="fade-right" data-aos-once="true" class="text-base text-gradient font-semibold uppercase"
+            >Sign Up Today</span
+          >
           <h1
             data-aos="fade-right"
             data-aos-once="true"
@@ -12,10 +14,15 @@
           >
             The World's <span class="text-header-gradient">Fastest Growing</span> Crypto Web App
           </h1>
-          <p class="paragraph hidden sm:block">
+          <p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="paragraph hidden sm:block">
             Buy and sell 200+ cryptocurrencies with 20+ flat currencies using bank transfers or your credit/debit card.
           </p>
-          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2">
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-delay="700"
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2"
+          >
             <BaseButton
               class="max-w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] border border-[#0c66ee] text-white"
             >
@@ -31,10 +38,39 @@
         </div>
         <div class="hidden sm:block col-span-12 lg:col-span-6">
           <div class="w-full">
-            <img :src="require('~/assets/img/hero-image.png')" class="-mt-4" alt="" />
+            <img
+              data-aos="fade-up"
+              data-aos-once="true"
+              :src="require('~/assets/img/hero-image.png')"
+              class="-mt-4"
+              alt=""
+            />
           </div>
         </div>
-        <BaseHeroPattern />
+        <img
+          data-aos="fade-up"
+          data-aos-delay="300"
+          :src="require('~/assets/img/pattern/ellipse-1.png')"
+          class="hidden sm:block absolute bottom-12 xl:bottom-16 left-4 xl:left-0 w-6"
+        />
+        <img
+          data-aos="fade-up"
+          data-aos-delay="300"
+          :src="require('~/assets/img/pattern/ellipse-2.png')"
+          class="hidden sm:block absolute top-4 sm:top-10 right-64 sm:right-96 xl:right-[32rem] w-6"
+        />
+        <img
+          data-aos="fade-up"
+          data-aos-delay="300"
+          :src="require('~/assets/img/pattern/ellipse-3.png')"
+          class="hidden sm:block absolute bottom-56 right-24 w-6"
+        />
+        <img
+          data-aos="fade-up"
+          data-aos-delay="300"
+          :src="require('~/assets/img/pattern/star.png')"
+          class="hidden sm:block absolute top-20 sm:top-28 right-16 lg:right-0 lg:left-[30rem] w-8"
+        />
       </BaseSection>
     </section>
 
@@ -43,13 +79,26 @@
       class="max-w-screen-xl mx-2 sm:mx-auto px-4 sm:px-6 sm:px-10 lg:px-0 py-6 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md transform lg:-translate-y-12"
     >
       <div class="w-full flex flex-col lg:flex-row items-center justify-center">
-        <LandingCryptoStatistic title="🔥 Trending" :datasets="trendings" class="xl:border-r border-gray-200 lg:px-8" />
         <LandingCryptoStatistic
+          data-aos="fade-up"
+          title="🔥 Trending"
+          :datasets="trendings"
+          class="xl:border-r border-gray-200 lg:px-8"
+        />
+        <LandingCryptoStatistic
+          data-aos="fade-up"
+          data-aos-delay="150"
           title="🚀 Top Gainers"
           :datasets="topGainers"
           class="xl:border-r border-gray-200 lg:px-8"
         />
-        <LandingCryptoStatistic title="💎 Recently Added" :datasets="recents" class="lg:px-8" />
+        <LandingCryptoStatistic
+          data-aos="fade-up"
+          data-aos-delay="300"
+          title="💎 Recently Added"
+          :datasets="recents"
+          class="lg:px-8"
+        />
       </div>
     </section>
 
@@ -57,7 +106,7 @@
     <section class="w-full my-24">
       <BaseSection>
         <LandingBuyTradeImage class="sm:hidden mb-8" />
-        <div class="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4">
+        <div data-aos="fade-right" class="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4">
           <h2 class="text-4xl font-semibold sm:pr-8 xl:pr-12">
             Buy & trade on the <br class="hidden sm:block" />
             original crypto exchange.
@@ -81,16 +130,16 @@
             <BaseButton class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">Buy Now</BaseButton>
           </div>
         </div>
-        <LandingBuyTradeImage class="hidden sm:block" />
+        <LandingBuyTradeImage data-aos="fade-left" class="hidden sm:block" />
       </BaseSection>
     </section>
 
     <!-- Partners section -->
     <section class="bg-partner relative max-w-full sm:mx-6 sm:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div class="w-full px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
-        <h3 class="text-2xl text-neutral-800 font-semibold">Trusted Partners Worldwide</h3>
-        <p class="paragraph">We're partners with countless major organisations around the globe</p>
-        <div class="flex flex-wrap items-center justify-center">
+        <h3 data-aos="flip-down" class="text-2xl text-neutral-800 font-semibold">Trusted Partners Worldwide</h3>
+        <p data-aos="flip-down" class="paragraph">We're partners with countless major organisations around the globe</p>
+        <div data-aos="fade-up" class="flex flex-wrap items-center justify-center">
           <LandingPartnerImage
             v-for="img in ['clever.png', 'diamon-cutts.png', 'swiss-finance.png', 'gambio.png']"
             :key="img"
@@ -102,7 +151,7 @@
 
     <!-- Credit card section -->
     <section class="w-full my-36">
-      <BaseSection>
+      <BaseSection data-aos="fade-down">
         <div class="col-span-12 lg:col-span-7">
           <div class="w-full">
             <img :src="require('~/assets/img/nefa-cc.png')" class="w-[95%]" alt="" />
@@ -132,7 +181,7 @@
     >
       <div class="relative max-w-screen-xl px-4 sm:px-2 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
         <LandingTradingToolImage class="sm:hidden" />
-        <div class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8">
+        <div data-aos="fade-right" class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8">
           <h2 class="text-4xl font-semibold">Advanced Trading <span class="text-header-gradient">Tools</span></h2>
           <div class="space-y-2">
             <h4 class="text-lg font-medium">Professional Access, Non-stop Availability</h4>
@@ -164,19 +213,19 @@
             </BaseButton>
           </div>
         </div>
-        <LandingTradingToolImage class="hidden sm:block" />
+        <LandingTradingToolImage data-aos="fade-left" class="hidden sm:block" />
       </div>
     </section>
 
     <!-- Industry-leading security section -->
     <section class="w-full my-24">
       <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
-        <div class="col-span-12 lg:col-span-6">
+        <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
           <div class="w-full">
             <img :src="require('~/assets/img/industry-leading-security.png')" class="w-full" alt="" />
           </div>
         </div>
-        <div class="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
+        <div data-aos="fade-left" class="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
           <h2 class="text-4xl font-semibold">Industry-leading security from day one</h2>
           <ul class="space-y-8 sm:space-y-4">
             <LandingListItem title="Safety, security and compliance">
@@ -206,8 +255,11 @@
     <!-- Getting started section -->
     <section class="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div class="w-full py-16 flex flex-col items-center">
-        <h2 class="text-3xl sm:text-4xl font-semibold text-center">Get started in just a few minutes</h2>
+        <h2 data-aos="flip-down" class="text-3xl sm:text-4xl font-semibold text-center">
+          Get started in just a few minutes
+        </h2>
         <div
+          data-aos="fade-up"
           class="relative w-full flex flex-col lg:flex-row items-center justify-between space-y-12 lg:space-y-0 px-4 xl:px-10 mt-16 sm:mt-8"
         >
           <LandingStep v-for="step in steps" :key="step.title" :step="step" />
@@ -228,12 +280,12 @@
     <!-- FAQ section -->
     <section class="w-full my-24">
       <BaseSection>
-        <div class="col-span-12 lg:col-span-6">
+        <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
           <div class="w-full">
             <img :src="require('~/assets/img/faq.png')" class="w-full" alt="" />
           </div>
         </div>
-        <div class="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
+        <div data-aos="fade-left" class="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
           <span class="text-base text-gradient font-semibold uppercase mb-4 sm:mb-2">Support</span>
           <h2 class="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6">Frequently asked questions</h2>
 
@@ -247,7 +299,8 @@
     <div class="w-full my-10 flex justify-center">
       <a
         v-smooth-scroll
-        href="#hero"
+        data-aos="flip-down"
+        href="#navbar"
         class="px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700"
       >
         <span>Back to top</span>
