@@ -280,12 +280,12 @@
     <!-- FAQ section -->
     <section class="w-full my-24">
       <BaseSection>
-        <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
+        <div data-aos="fade-right" data-aos-delay="150" class="col-span-12 lg:col-span-6">
           <div class="w-full">
             <img :src="require('~/assets/img/faq.png')" class="w-full" alt="" />
           </div>
         </div>
-        <div data-aos="fade-left" class="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
+        <div data-aos="fade-left" data-aos-delay="150" class="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
           <span class="text-base text-gradient font-semibold uppercase mb-4 sm:mb-2">Support</span>
           <h2 class="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6">Frequently asked questions</h2>
 
@@ -300,6 +300,7 @@
       <a
         v-smooth-scroll
         data-aos="flip-down"
+        data-aos-delay="150"
         href="#navbar"
         class="px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700"
       >
