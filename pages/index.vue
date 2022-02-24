@@ -76,7 +76,7 @@
 
     <!-- Crypto statistic section -->
     <section
-      class="max-w-screen-xl mx-2 sm:mx-auto px-4 sm:px-6 sm:px-10 lg:px-0 py-6 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md transform lg:-translate-y-12"
+      class="max-w-screen-xl mx-2 sm:mx-auto px-4 sm:px-6 lg:px-0 py-6 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md transform lg:-translate-y-12"
     >
       <div class="w-full flex flex-col lg:flex-row items-center justify-center">
         <LandingCryptoStatistic
@@ -135,7 +135,7 @@
     </section>
 
     <!-- Partners section -->
-    <section class="bg-partner relative max-w-full sm:mx-6 sm:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
+    <section class="bg-partner relative max-w-full sm:mx-6 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div class="w-full px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
         <h3 data-aos="flip-down" class="text-2xl text-neutral-800 font-semibold">Trusted Partners Worldwide</h3>
         <p data-aos="flip-down" class="paragraph">We're partners with countless major organisations around the globe</p>
@@ -177,9 +177,9 @@
 
     <!-- Advanced trading tools section -->
     <section
-      class="bg-trading-tools relative max-w-full sm:mx-4 sm:mx-8 my-20 py-16 shadow rounded-2xl overflow-hidden"
+      class="bg-trading-tools relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden"
     >
-      <div class="relative max-w-screen-xl px-4 sm:px-2 sm:px-8 mx-auto grid grid-cols-12 gap-x-6">
+      <div class="relative max-w-screen-xl px-4 sm:px-2 mx-auto grid grid-cols-12 gap-x-6">
         <LandingTradingToolImage class="sm:hidden" />
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8">
           <h2 class="text-4xl font-semibold">Advanced Trading <span class="text-header-gradient">Tools</span></h2>
@@ -493,7 +493,7 @@ export default {
 .text-header-gradient {
   background: rgb(57, 132, 244);
   background: linear-gradient(169.4deg, #3984f4 -6.01%, #0cd3ff 36.87%, #2f7cf0 78.04%, #0e65e8 103.77%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .bg-partner {
