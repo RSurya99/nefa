@@ -41,7 +41,7 @@
             <img
               data-aos="fade-up"
               data-aos-once="true"
-              :src="require('~/assets/img/hero-image.png')"
+              :src="require('~/assets/img/hero-image.webp')"
               class="-mt-4"
               alt=""
             />
@@ -154,7 +154,7 @@
       <BaseSection data-aos="fade-down">
         <div class="col-span-12 lg:col-span-7">
           <div class="w-full">
-            <img :src="require('~/assets/img/nefa-cc.png')" class="w-[95%]" alt="" />
+            <img :src="require('~/assets/img/nefa-cc.webp')" class="w-[95%]" alt="" />
           </div>
         </div>
         <div class="col-span-12 lg:col-span-5 space-y-6 px-4 sm:px-6 mt-20">
@@ -176,9 +176,7 @@
     </section>
 
     <!-- Advanced trading tools section -->
-    <section
-      class="bg-trading-tools relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden"
-    >
+    <section class="bg-trading-tools relative max-w-full sm:mx-4 my-20 py-16 shadow rounded-2xl overflow-hidden">
       <div class="relative max-w-screen-xl px-4 sm:px-2 mx-auto grid grid-cols-12 gap-x-6">
         <LandingTradingToolImage class="sm:hidden" />
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8">
@@ -222,7 +220,7 @@
       <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
           <div class="w-full">
-            <img :src="require('~/assets/img/industry-leading-security.png')" class="w-full" alt="" />
+            <img :src="require('~/assets/img/industry-leading-security.webp')" class="w-full" alt="" />
           </div>
         </div>
         <div data-aos="fade-left" class="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
@@ -282,7 +280,7 @@
       <BaseSection>
         <div data-aos="fade-right" data-aos-delay="150" class="col-span-12 lg:col-span-6">
           <div class="w-full">
-            <img :src="require('~/assets/img/faq.png')" class="w-full" alt="" />
+            <img :src="require('~/assets/img/faq.webp')" class="w-full" alt="" />
           </div>
         </div>
         <div data-aos="fade-left" data-aos-delay="150" class="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
@@ -502,7 +500,7 @@ export default {
   background-position: center;
 }
 .bg-trading-tools {
-  background: url('../assets/img/bg-trading-tools.png');
+  background: url('../assets/img/bg-trading-tools.webp');
   background-size: cover;
   background-position: center;
 }
