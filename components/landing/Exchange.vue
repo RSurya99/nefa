@@ -13,7 +13,8 @@
       <button
         type="button"
         class="relative w-full flex items-center justify-center space-x-1 relative sm:px-6 py-[1.35rem] border border-[#0c66ee] rounded-xl text-sm font-medium"
-        @click="openDropdown = !openDropdown"
+        @click="toggleDropdown"
+        @blur="toggleDropdown"
       >
         <img :src="require(`~/assets/img/${exchangeSelected.img}`)" alt="" class="flex-shrink-0 h-6 w-6 rounded-full" />
         <span class="ml-3 block truncate">{{ exchangeSelected.name }}</span>
@@ -68,5 +69,10 @@ export default {
       openDropdown: false,
     }
   },
+  methods: {
+    toggleDropdown () {
+      this.openDropdown = !this.openDropdown
+    }
+  }
 }
 </script>

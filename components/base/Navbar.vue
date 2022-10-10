@@ -23,7 +23,8 @@
           <li class="relative group">
             <button
               class="md:px-4 py-2 text-sm bg-transparent rounded-lg text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline flex items-center"
-              @click="dropdownNavbar = !dropdownNavbar"
+              @click="dropdownToggler"
+              @blur="dropdownToggler"
             >
               <span>Products</span>
               <ChevronUpIcon v-if="dropdownNavbar" :size="16" />
@@ -71,5 +72,10 @@ export default {
       dropdownNavbar: false,
     }
   },
+  methods: {
+    dropdownToggler () {
+      this.dropdownNavbar = !this.dropdownNavbar
+    }
+  }
 }
 </script>
