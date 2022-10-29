@@ -13,3 +13,15 @@
 .paragraph {
   @apply text-gray-700 tracking-wide leading-relaxed;
 }
+
+
+/* for remove arrow spinner button on input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

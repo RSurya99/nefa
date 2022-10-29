@@ -1,18 +1,18 @@
 <template>
   <div class="flex items-center space-x-4">
     <div class="lg:max-w-[336px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
-      <span class="text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> {{ name }} </span>
+      <span class="text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> {{ title }} </span>
       <input
-        type="text"
+        :type="type"
         class="w-full text-lg font-medium text-right border-none ring-0 focus:outline-none focus:ring-0"
-        name="url"
-        :value="value"
+        :name="name"
+        :value="defaultValue"
       />
     </div>
     <div class="relative w-full max-w-[106px] sm:max-w-[159px]">
       <button
         type="button"
-        class="relative w-full flex items-center justify-center space-x-1 relative sm:px-6 py-[1.35rem] border border-[#0c66ee] rounded-xl text-sm font-medium"
+        class="w-full flex items-center justify-center space-x-1 relative sm:px-6 py-[1.35rem] border border-[#0c66ee] rounded-xl text-sm font-medium"
         @click="toggleDropdown"
         @blur="toggleDropdown"
       >
@@ -47,11 +47,16 @@
 export default {
   name: 'LandingExchange',
   props: {
-    name: {
+    title: {
       type: String,
       default: '',
     },
-    value: {
+    name: {
+      type: String,
+      require: true,
+      default: ""
+    },
+    defaultValue: {
       type: [Number, String],
       default: '',
     },
@@ -63,6 +68,10 @@ export default {
       type: Array,
       required: true,
     },
+    type: {
+      type: String,
+      default: "text"
+    }
   },
   data() {
     return {

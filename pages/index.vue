@@ -116,14 +116,18 @@
           </p>
           <div class="space-y-6 lg:pr-12">
             <LandingExchange
-              name="Amount"
-              value="5.000"
+              title="Amount"
+              name="amount"
+              type="number"
+              default-value="5.000"
               :exchange-selected="currencySelected"
               :exchanges="currencies"
             />
             <LandingExchange
-              name="Get"
-              value="0.10901"
+              title="Get"
+              name="get"
+              type="number"
+              default-value="0.10901"
               :exchange-selected="cryptoSelected"
               :exchanges="cryptocurrencies"
             />
