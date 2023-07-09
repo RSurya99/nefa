@@ -44,6 +44,9 @@ $ yarn start
 $ yarn generate
 ```
 
+## Other version of NEFA
+- [React NEFA](https://github.com/hakimov-dev/nefa-react) by [Muhammadamin](https://github.com/hakimov-dev)
+
 Use it for learn, but please don’t republish, redistribute, or resell the template.
 
 Code by [rsurya99](https://github.com/rsurya99)  
