@@ -5,18 +5,17 @@
       <BaseSection>
         <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
           <span data-aos="fade-right" data-aos-once="true" class="text-base text-gradient font-semibold uppercase"
-            >Sign Up Today</span
+            >Be a test user</span
           >
           <h1
             data-aos="fade-right"
             data-aos-once="true"
             class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10"
           >
-            The World's <span class="text-header-gradient">Fastest Growing</span> Crypto Web App
+            The World's <span class="text-header-gradient">First</span> AI tour guide
           </h1>
           <p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="paragraph hidden sm:block">
-            Buy and sell 200+ cryptocurrencies with 20+ flat currencies using bank transfers or your credit/debit card.
-          </p>
+            Explore museums like never before! Interactive, engaging tours. Your personal guide to art, history, and culture. Join us and explore now!          </p>
           <div
             data-aos="fade-up"
             data-aos-once="true"
@@ -41,18 +40,18 @@
             <img
               data-aos="fade-up"
               data-aos-once="true"
-              :src="require('~/assets/img/hero-image.webp')"
-              class="-mt-4"
+              :src="require('~/assets/img/museye-herogrid.png')"
+              class="margin-top: 0.5rem"
               alt=""
             />
           </div>
         </div>
-        <img
+        <!-- <img
           data-aos="fade-up"
           data-aos-delay="300"
           :src="require('~/assets/img/pattern/ellipse-1.png')"
           class="hidden sm:block absolute bottom-12 xl:bottom-16 left-4 xl:left-0 w-6"
-        />
+        /> -->
         <img
           data-aos="fade-up"
           data-aos-delay="300"
@@ -65,17 +64,17 @@
           :src="require('~/assets/img/pattern/ellipse-3.png')"
           class="hidden sm:block absolute bottom-56 right-24 w-6"
         />
-        <img
+        <!-- <img
           data-aos="fade-up"
           data-aos-delay="300"
           :src="require('~/assets/img/pattern/star.png')"
           class="hidden sm:block absolute top-20 sm:top-28 right-16 lg:right-0 lg:left-[30rem] w-8"
-        />
+        /> -->
       </BaseSection>
     </section>
 
     <!-- Crypto statistic section -->
-    <section
+    <!-- <section
       class="max-w-screen-xl mx-2 sm:mx-auto px-4 sm:px-6 lg:px-0 py-6 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md transform lg:-translate-y-12"
     >
       <div class="w-full flex flex-col lg:flex-row items-center justify-center">
@@ -100,10 +99,10 @@
           class="lg:px-8"
         />
       </div>
-    </section>
+    </section> -->
 
     <!-- Buy and trade section -->
-    <section class="w-full my-24">
+    <!-- <section class="w-full my-24">
       <BaseSection>
         <LandingBuyTradeImage class="sm:hidden mb-8" />
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4">
@@ -136,7 +135,7 @@
         </div>
         <LandingBuyTradeImage data-aos="fade-left" class="hidden sm:block" />
       </BaseSection>
-    </section>
+    </section> -->
 
     <!-- Partners section -->
     <section class="bg-partner relative max-w-full sm:mx-6 my-24 shadow sm:rounded-2xl overflow-hidden">
@@ -145,7 +144,7 @@
         <p data-aos="flip-down" class="paragraph">We're partners with countless major organisations around the globe</p>
         <div data-aos="fade-up" class="flex flex-wrap items-center justify-center">
           <LandingPartnerImage
-            v-for="img in ['clever.png', 'diamon-cutts.png', 'swiss-finance.png', 'gambio.png']"
+            v-for="img in ['BPL.png', 'btulogo.png', 'microsoft.png']"
             :key="img"
             :img="img"
           />
@@ -156,20 +155,20 @@
     <!-- Credit card section -->
     <section class="w-full my-36">
       <BaseSection data-aos="fade-down">
-        <div class="col-span-12 lg:col-span-7">
+        <div class="col-span-14 lg:col-span-7">
           <div class="w-full">
-            <img :src="require('~/assets/img/nefa-cc.webp')" class="w-[95%]" alt="" />
+            <img :src="require('~/assets/img/Museyeintro.png')" class=" w-[95%]" alt="" />
           </div>
         </div>
         <div class="col-span-12 lg:col-span-5 space-y-6 px-4 sm:px-6 mt-20">
-          <h2 class="text-4xl font-semibold">
-            Introducing the <span class="text-header-gradient">NEFA</span> Credit Card
+          <h2 id="aiintro" class="text-4xl font-semibold">
+            Introducing  <span class="text-header-gradient">Museye</span> AI tour guide
           </h2>
-          <p class="paragraph">Subject to cardholder and rewards terms which will be available at application.</p>
+          <p class="paragraph">The spotify of museums</p>
           <ul class="space-y-4 sm:space-y-2">
-            <LandingListItem title="Up to 3% back on purchases" />
-            <LandingListItem title="Earn rewards in bitcoin or any crypto on NEFA" />
-            <LandingListItem title="No annual fee" />
+            <LandingListItem title="Explore, plan and book your visits" />
+            <LandingListItem title="Keep track of your museums visits and save your memories!" />
+            <LandingListItem title="Personalised experience to each and every users!" />
           </ul>
           <BaseButton
             class="w-full sm:max-w-[240px] px-10 py-4 bg-inherit text-gradient border border-[#0c66ee] text-base"
@@ -184,27 +183,23 @@
       <div class="relative max-w-screen-xl px-4 sm:px-2 mx-auto grid grid-cols-12 gap-x-6">
         <LandingTradingToolImage class="sm:hidden" />
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8">
-          <h2 class="text-4xl font-semibold">Advanced Trading <span class="text-header-gradient">Tools</span></h2>
+          <h2 class="text-4xl font-semibold">Museums Education <span class="text-header-gradient">4.0</span></h2>
           <div class="space-y-2">
-            <h4 class="text-lg font-medium">Professional Access, Non-stop Availability</h4>
+            <h4 class="text-lg font-medium">The spotify of museums</h4>
             <p class="paragraph text-sm xl:text-base">
-              We provide premium access to crypto trading for both individuals and institutions through high liquidity,
-              reliable order execution and constant uptime.
+              Elevate your cultural journey! Stay updated with exhibitions you love. Our platform connects you to museums and galleries, keeping you in sync with the art and culture scene. Experience the pulse of creativity and heritage seamlessly.            </p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="text-lg font-medium">Personalised experience for each and every visitor</h4>
+            <p class="paragraph text-sm xl:text-base">
+              Revolutionize your museum visit! Personalized experiences for all <strong>ages</strong>, <strong>languages</strong>, and <strong>level of interest</strong> using advanced AI. Make every tour unique and engaging.
+
             </p>
           </div>
           <div class="space-y-2">
-            <h4 class="text-lg font-medium">A Range of Powerful Apis</h4>
+            <h4 class="text-lg font-medium">Acceessable museums for everyone!</h4>
             <p class="paragraph text-sm xl:text-base">
-              Set up your own trading interface or deploy your algorithmic strategy with our high-performance FIX and
-              HTTP APIs. Connect to our WebSocket for real-time data streaming.
-            </p>
-          </div>
-          <div class="space-y-2">
-            <h4 class="text-lg font-medium">Customer Support</h4>
-            <p class="paragraph text-sm xl:text-base">
-              Premium 24/7 support available to all customers worldwide by phone or email. Dedicated account managers
-              for partners.
-            </p>
+              Enhanced accessibility in museums worldwide. Tailored services for <strong>visitors with visual and auditory impairments</strong>. Experience art and history inclusively and effortlessly. Dedicated support ensuring a seamless and enriching visit.            </p>
           </div>
           <div class="flex flex-col sm:flex-row">
             <BaseButton class="px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base">
@@ -220,7 +215,7 @@
     </section>
 
     <!-- Industry-leading security section -->
-    <section class="w-full my-24">
+    <!-- <section class="w-full my-24">
       <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
           <div class="w-full">
@@ -252,35 +247,34 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Getting started section -->
     <section class="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div class="w-full py-16 flex flex-col items-center">
         <h2 data-aos="flip-down" class="text-3xl sm:text-4xl font-semibold text-center">
-          Get started in just a few minutes
-        </h2>
+            Get to know our super team!        </h2>
         <div
           data-aos="fade-up"
           class="relative w-full flex flex-col lg:flex-row items-center justify-between space-y-12 lg:space-y-0 px-4 xl:px-10 mt-16 sm:mt-8"
         >
           <LandingStep v-for="step in steps" :key="step.title" :step="step" />
-          <img
+          <!-- <img
             :src="require('~/assets/img/getting-started/arrow.png')"
             class="hidden lg:inline-block absolute top-32 left-64 xl:left-[22rem] w-24 xl:w-[9.5rem]"
             alt=""
-          />
-          <img
+          /> -->
+          <!-- <img
             :src="require('~/assets/img/getting-started/arrow.png')"
             class="hidden lg:inline-block absolute top-32 right-64 xl:right-[22rem] w-24 xl:w-[9.5rem]"
             alt=""
-          />
+          /> -->
         </div>
       </div>
     </section>
 
     <!-- FAQ section -->
-    <section class="w-full my-24">
+    <!-- <section class="w-full my-24">
       <BaseSection>
         <div data-aos="fade-right" data-aos-delay="150" class="col-span-12 lg:col-span-6">
           <div class="w-full">
@@ -296,9 +290,9 @@
           </ul>
         </div>
       </BaseSection>
-    </section>
+    </section> -->
 
-    <div class="w-full my-10 flex justify-center">
+    <!-- <div class="w-full my-10 flex justify-center">
       <a
         v-smooth-scroll
         data-aos="flip-down"
@@ -309,7 +303,7 @@
         <span>Back to top</span>
         <ArrowUpIcon :size="20" />
       </a>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -327,124 +321,124 @@ export default {
         img: 'country-icon/eng.png',
         name: 'USD',
       },
-      currencies: [
-        {
-          img: 'country-icon/eng.png',
-          name: 'USD',
-        },
-      ],
-      cryptoSelected: {
-        img: 'crypto-icon/bitcoin.png',
-        name: 'BTC',
-      },
-      cryptocurrencies: [
-        {
-          img: 'crypto-icon/bitcoin.png',
-          name: 'BTC',
-        },
-      ],
-      trendings: [
-        {
-          id: 1,
-          name: 'Bitcoin',
-          price: 43180.13,
-          logo: 'bitcoin.png',
-          increase: true,
-          data: [40, 35, 60, 75, 60, 75, 50],
-        },
-        {
-          id: 2,
-          name: 'Ethereum',
-          price: 3480.65,
-          logo: 'ethereum.png',
-          increase: false,
-          data: [25, 30, 60, 50, 80, 55, 80],
-        },
-        {
-          id: 3,
-          name: 'Solana',
-          price: 150.2,
-          logo: 'solana.png',
-          increase: true,
-          data: [40, 45, 40, 80, 50, 60, 35],
-        },
-        {
-          id: 4,
-          name: 'Dogecoin',
-          price: 0.1572,
-          logo: 'dogecoin.png',
-          increase: true,
-          data: [35, 70, 60, 80, 50, 60, 40],
-        },
-      ],
-      topGainers: [
-        {
-          id: 1,
-          name: 'PAPPAY',
-          price: 0.00374,
-          logo: 'pappay.png',
-          increase: true,
-          data: [30, 50, 45, 60, 70, 40, 45],
-        },
-        {
-          id: 2,
-          name: 'Bitcoin Asia',
-          price: 0.02096,
-          logo: 'bitcoin-asia.png',
-          increase: true,
-          data: [25, 60, 50, 60, 35, 50, 70],
-        },
-        {
-          id: 3,
-          name: 'MoonRock',
-          price: 0.004907,
-          logo: 'moonrock.png',
-          increase: true,
-          data: [40, 35, 40, 25, 50, 70, 45],
-        },
-        {
-          id: 4,
-          name: 'NinjaFloki',
-          price: 0.000123,
-          logo: 'ninjafloki.png',
-          increase: true,
-          data: [45, 35, 40, 30, 25, 45, 35],
-        },
-      ],
-      recents: [
-        {
-          id: 1,
-          name: 'MetaCraft',
-          price: 0.0608,
-          logo: 'metacraft.png',
-          increase: false,
-          data: [40, 50, 45, 60, 35, 40, 45],
-        },
-        {
-          id: 2,
-          name: 'Frog',
-          price: 0.5875,
-          logo: 'frog.png',
-          increase: false,
-          data: [25, 50, 45, 48, 40, 60, 45],
-        },
-        {
-          id: 3,
-          name: 'Musk Doge',
-          price: 0.04041,
-          logo: 'musk-doge.png',
-          increase: true,
-          data: [25, 35, 60, 45, 50, 45, 45],
-        },
-        {
-          id: 4,
-          name: '2SHARE',
-          price: 1366.24,
-          logo: '2share.png',
-          increase: true,
-          data: [35, 30, 60, 50, 35, 45, 40],
-        },
-      ],
+      // currencies: [
+      //   {
+      //     img: 'country-icon/eng.png',
+      //     name: 'USD',
+      //   },
+      // ],
+      // cryptoSelected: {
+      //   img: 'crypto-icon/bitcoin.png',
+      //   name: 'BTC',
+      // },
+      // cryptocurrencies: [
+      //   {
+      //     img: 'crypto-icon/bitcoin.png',
+      //     name: 'BTC',
+      //   },
+      // ],
+      // trendings: [
+      //   {
+      //     id: 1,
+      //     name: 'Bitcoin',
+      //     price: 43180.13,
+      //     logo: 'bitcoin.png',
+      //     increase: true,
+      //     data: [40, 35, 60, 75, 60, 75, 50],
+      //   },
+      //   {
+      //     id: 2,
+      //     name: 'Ethereum',
+      //     price: 3480.65,
+      //     logo: 'ethereum.png',
+      //     increase: false,
+      //     data: [25, 30, 60, 50, 80, 55, 80],
+      //   },
+      //   {
+      //     id: 3,
+      //     name: 'Solana',
+      //     price: 150.2,
+      //     logo: 'solana.png',
+      //     increase: true,
+      //     data: [40, 45, 40, 80, 50, 60, 35],
+      //   },
+      //   {
+      //     id: 4,
+      //     name: 'Dogecoin',
+      //     price: 0.1572,
+      //     logo: 'dogecoin.png',
+      //     increase: true,
+      //     data: [35, 70, 60, 80, 50, 60, 40],
+      //   },
+      // ],
+      // topGainers: [
+      //   {
+      //     id: 1,
+      //     name: 'PAPPAY',
+      //     price: 0.00374,
+      //     logo: 'pappay.png',
+      //     increase: true,
+      //     data: [30, 50, 45, 60, 70, 40, 45],
+      //   },
+      //   {
+      //     id: 2,
+      //     name: 'Bitcoin Asia',
+      //     price: 0.02096,
+      //     logo: 'bitcoin-asia.png',
+      //     increase: true,
+      //     data: [25, 60, 50, 60, 35, 50, 70],
+      //   },
+      //   {
+      //     id: 3,
+      //     name: 'MoonRock',
+      //     price: 0.004907,
+      //     logo: 'moonrock.png',
+      //     increase: true,
+      //     data: [40, 35, 40, 25, 50, 70, 45],
+      //   },
+      //   {
+      //     id: 4,
+      //     name: 'NinjaFloki',
+      //     price: 0.000123,
+      //     logo: 'ninjafloki.png',
+      //     increase: true,
+      //     data: [45, 35, 40, 30, 25, 45, 35],
+      //   },
+      // ],
+      // recents: [
+      //   {
+      //     id: 1,
+      //     name: 'MetaCraft',
+      //     price: 0.0608,
+      //     logo: 'metacraft.png',
+      //     increase: false,
+      //     data: [40, 50, 45, 60, 35, 40, 45],
+      //   },
+      //   {
+      //     id: 2,
+      //     name: 'Frog',
+      //     price: 0.5875,
+      //     logo: 'frog.png',
+      //     increase: false,
+      //     data: [25, 50, 45, 48, 40, 60, 45],
+      //   },
+      //   {
+      //     id: 3,
+      //     name: 'Musk Doge',
+      //     price: 0.04041,
+      //     logo: 'musk-doge.png',
+      //     increase: true,
+      //     data: [25, 35, 60, 45, 50, 45, 45],
+      //   },
+      //   {
+      //     id: 4,
+      //     name: '2SHARE',
+      //     price: 1366.24,
+      //     logo: '2share.png',
+      //     increase: true,
+      //     data: [35, 30, 60, 50, 35, 45, 40],
+      //   },
+      // ],
       accordions: [
         {
           title: 'Why should I choose NEFA?',
@@ -469,16 +463,16 @@ export default {
       ],
       steps: [
         {
-          img: 'sign-up.png',
-          title: 'Sign Up',
+          img: 'Artur.jpeg',
+          title: 'Artur Schröder, CTO',
           description:
-            'Sign up for your free NEFA Wallet on web, iOS or Android and follow our easy process to set up your profile',
+            'E-Business specialist, Product Manager, and software manager',
         },
         {
-          img: 'fund.png',
-          title: 'Fund',
+          img: 'Zeyn.png',
+          title: 'Zeyn Hassan, CEO',
           description:
-            'Choose your preferred payment method such as bank transfer or credit card to top up your NEFA Wallet',
+            'Former Historian, Museum Expert and a current Software Develoepr',
         },
         {
           img: 'buy-crypto.png',
@@ -493,7 +487,7 @@ export default {
 </script>
 <style scoped>
 .text-header-gradient {
-  background: rgb(57, 132, 244);
+  background: rgb(110, 41, 151);
   background: linear-gradient(169.4deg, #3984f4 -6.01%, #0cd3ff 36.87%, #2f7cf0 78.04%, #0e65e8 103.77%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
