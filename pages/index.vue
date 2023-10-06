@@ -49,12 +49,6 @@
             />
           </div>
         </div>
-        <!-- <img
-          data-aos="fade-up"
-          data-aos-delay="300"
-          :src="require('~/assets/img/pattern/ellipse-1.png')"
-          class="hidden sm:block absolute bottom-12 xl:bottom-16 left-4 xl:left-0 w-6"
-        /> -->
         <img
           data-aos="fade-up"
           data-aos-delay="300"
@@ -67,78 +61,10 @@
           :src="require('~/assets/img/pattern/ellipse-3.png')"
           class="hidden sm:block absolute bottom-56 right-24 w-6"
         />
-        <!-- <img
-          data-aos="fade-up"
-          data-aos-delay="300"
-          :src="require('~/assets/img/pattern/star.png')"
-          class="hidden sm:block absolute top-20 sm:top-28 right-16 lg:right-0 lg:left-[30rem] w-8"
-        /> -->
       </BaseSection>
     </section>
 
-    <!-- Crypto statistic section -->
-    <!-- <section
-      class="max-w-screen-xl mx-2 sm:mx-auto px-4 sm:px-6 lg:px-0 py-6 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md transform lg:-translate-y-12"
-    >
-      <div class="w-full flex flex-col lg:flex-row items-center justify-center">
-        <LandingCryptoStatistic
-          data-aos="fade-up"
-          title="🔥 Trending"
-          :datasets="trendings"
-          class="xl:border-r border-gray-200 lg:px-8"
-        />
-        <LandingCryptoStatistic
-          data-aos="fade-up"
-          data-aos-delay="150"
-          title="🚀 Top Gainers"
-          :datasets="topGainers"
-          class="xl:border-r border-gray-200 lg:px-8"
-        />
-        <LandingCryptoStatistic
-          data-aos="fade-up"
-          data-aos-delay="300"
-          title="💎 Recently Added"
-          :datasets="recents"
-          class="lg:px-8"
-        />
-      </div>
-    </section> -->
 
-    <!-- Buy and trade section -->
-    <!-- <section class="w-full my-24">
-      <BaseSection>
-        <LandingBuyTradeImage class="sm:hidden mb-8" />
-        <div data-aos="fade-right" class="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4">
-          <h2 class="text-4xl font-semibold sm:pr-8 xl:pr-12">
-            Buy & trade on the <br class="hidden sm:block" />
-            original crypto exchange.
-          </h2>
-          <p class="paragraph">
-            Buy now and get 40% extra bonus Minimum pre-sale amount 25 Crypto Coin. We accept BTC crypto-currency
-          </p>
-          <div class="space-y-6 lg:pr-12">
-            <LandingExchange
-              title="Amount"
-              name="amount"
-              type="number"
-              default-value="5.000"
-              :exchange-selected="currencySelected"
-              :exchanges="currencies"
-            />
-            <LandingExchange
-              title="Get"
-              name="get"
-              type="number"
-              default-value="0.10901"
-              :exchange-selected="cryptoSelected"
-              :exchanges="cryptocurrencies"
-            />
-            <BaseButton class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">Buy Now</BaseButton>
-          </div>
-        </div>
-        <LandingBuyTradeImage data-aos="fade-left" class="hidden sm:block" />
-      </BaseSection>
-    </section> -->
 
     <!-- Partners section -->
     <section class="bg-partner relative max-w-full sm:mx-6 my-24 shadow sm:rounded-2xl overflow-hidden">
@@ -208,52 +134,12 @@
               Enhanced accessibility in museums worldwide. Tailored services for <strong>visitors with visual and auditory impairments</strong>. Experience art and history inclusively and effortlessly. Dedicated support ensuring a seamless and enriching visit.            </p>
           </div>
           <div class="flex flex-col sm:flex-row">
-            <!-- <BaseButton class="px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base">
-              Get Started
-            </BaseButton>
-            <BaseButton class="bg-inherit text-[#4A8FF6] px-10 py-4 text-center underline rounded-full">
-              Learn More
-            </BaseButton> -->
           </div>
         </div>
         <LandingTradingToolImage data-aos="fade-left" class="hidden sm:block" />
       </div>
     </section>
 
-    <!-- Industry-leading security section -->
-    <!-- <section class="w-full my-24">
-      <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
-        <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
-          <div class="w-full">
-            <img :src="require('~/assets/img/industry-leading-security.webp')" class="w-full" alt="" />
-          </div>
-        </div>
-        <div data-aos="fade-left" class="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
-          <h2 class="text-4xl font-semibold">Industry-leading security from day one</h2>
-          <ul class="space-y-8 sm:space-y-4">
-            <LandingListItem title="Safety, security and compliance">
-              <p class="text-sm text-gray-700 leading-relaxed">
-                NEFA is a licensed New York trust company that undergoes regular bank exams and is subject to the
-                cybersecurity audits conducted by the New York Department of Financial Services.
-                <span class="underline">Learn more</span> about our commitment to security.
-              </p>
-            </LandingListItem>
-            <LandingListItem title="Hardware security keys">
-              <p class="text-sm text-gray-700 leading-relaxed">
-                With NEFA you can secure your account with a hardware security key via WebAuthn.
-              </p>
-            </LandingListItem>
-            <LandingListItem title="SOC Certifications">
-              <p class="text-sm text-gray-700 leading-relaxed">
-                NEFA is <span class="underline">SOC 1 Type 2</span> and
-                <span class="underline">SOC 2 Type 2</span> compliant. We are the world’s first cryptocurrency exchange
-                and custodian to complete these exams.
-              </p>
-            </LandingListItem>
-          </ul>
-        </div>
-      </div>
-    </section> -->
 
     <!-- Getting started section -->
     <section class="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
@@ -265,51 +151,11 @@
           class="relative w-full flex flex-col lg:flex-row items-center justify-between space-y-12 lg:space-y-0 px-4 xl:px-10 mt-16 sm:mt-8"
         >
           <LandingStep v-for="step in steps" :key="step.title" :step="step" />
-          <!-- <img
-            :src="require('~/assets/img/getting-started/arrow.png')"
-            class="hidden lg:inline-block absolute top-32 left-64 xl:left-[22rem] w-24 xl:w-[9.5rem]"
-            alt=""
-          /> -->
-          <!-- <img
-            :src="require('~/assets/img/getting-started/arrow.png')"
-            class="hidden lg:inline-block absolute top-32 right-64 xl:right-[22rem] w-24 xl:w-[9.5rem]"
-            alt=""
-          /> -->
         </div>
       </div>
     </section>
 
-    <!-- FAQ section -->
-    <!-- <section class="w-full my-24">
-      <BaseSection>
-        <div data-aos="fade-right" data-aos-delay="150" class="col-span-12 lg:col-span-6">
-          <div class="w-full">
-            <img :src="require('~/assets/img/faq.webp')" class="w-full" alt="" />
-          </div>
-        </div>
-        <div data-aos="fade-left" data-aos-delay="150" class="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
-          <span class="text-base text-gradient font-semibold uppercase mb-4 sm:mb-2">Support</span>
-          <h2 class="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6">Frequently asked questions</h2>
 
-          <ul class="shadow-box">
-            <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" />
-          </ul>
-        </div>
-      </BaseSection>
-    </section> -->
-
-    <!-- <div class="w-full my-10 flex justify-center">
-      <a
-        v-smooth-scroll
-        data-aos="flip-down"
-        data-aos-delay="150"
-        href="#navbar"
-        class="px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700"
-      >
-        <span>Back to top</span>
-        <ArrowUpIcon :size="20" />
-      </a>
-    </div> -->
   </div>
 </template>
 
