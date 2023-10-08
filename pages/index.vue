@@ -5,7 +5,7 @@
       <BaseSection>
         <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
           <span data-aos="fade-right" data-aos-once="true" class="text-base text-gradient font-semibold uppercase"
-            >The Spotify of Museums</span
+            >Museful</span
           >
           <h1
             data-aos="fade-right"
@@ -91,7 +91,7 @@
         </div>
         <div class="col-span-12 lg:col-span-5 space-y-6 px-4 sm:px-6 mt-20">
           <h2 id="aiintro" class="text-4xl font-semibold">
-            Introducing  <span class="text-header-gradient">Museye</span> AI tour guide
+            Introducing  <span class="text-header-gradient">Museful</span> AI tour guide
           </h2>
           <p class="paragraph">The spotify of museums</p>
           <ul class="space-y-4 sm:space-y-2">
@@ -117,9 +117,9 @@
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8">
           <h2 class="text-4xl font-semibold">Museums Education <span class="text-header-gradient">4.0</span></h2>
           <div class="space-y-2">
-            <h4 class="text-lg font-medium">The spotify of museums</h4>
+            <h4 class="text-lg font-medium">Your Personal Tour Guide in your Pocket</h4>
             <p class="paragraph text-sm xl:text-base">
-              Elevate your cultural journey! Stay updated with exhibitions you love. Our platform connects you to museums and galleries, keeping you in sync with the art and culture scene. Experience the pulse of creativity and heritage seamlessly.            </p>
+              Dive into the heart of creativity and history, where every museum becomes a masterpiece, every artifact a storyteller. Elevate your cultural exploration and stay connected to the pulse of history and innovation. Join us as we redefine museum education and enhance how you perceive, interact with, and cherish culture, history and art.            </p>
           </div>
           <div class="space-y-2">
             <h4 class="text-lg font-medium">Personalised experience for each and every visitor</h4>
@@ -315,23 +315,23 @@ export default {
       ],
       steps: [
         {
-          img: 'Artur.png',
-          title: 'Artur Schröder',
+          img: 'Goga.png',
+          title: 'Chris Goga',
           description:
-            'E-Business specialist, Product Manager, and software manager',
+            'Finance Manager in AI & Robotics Startup 6+ years of consulting experience (KPMG) in finance and digital transformation',
         },
         {
           img: 'Zeyn.png',
           title: 'Zeyn Hassan',
           description:
-            'Former Historian, Museum Expert and a current Software Develoepr',
+            'Former Historian, Museum Expert and an ambitious Software Develoepr',
         },
-        // {
-        //   img: 'buy-crypto.png',
-        //   title: 'Buy Crypto',
-        //   description:
-        //     'Buy Bitcoin or Ethereum, then securely store it in your Wallet or send it on easily to your friends anywhere',
-        // },
+        {
+          img: 'Artur.png',
+          title: 'Artur Schröder',
+          description:
+            'E-Business specialist, Product Manager, and software manager',
+        },
       ],
     }
   },
