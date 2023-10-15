@@ -5,31 +5,33 @@
         <div
           class="md:w-full lg:w-full w-full sm:w-1/2 xl:w-fit flex flex-col sm:flex-row sm:px-6 py-6 sm:py-12 sm:space-x-10 sm:border-r-0 border-[#DDDDDD]"
         >
-          <div class="sm:hidden xl:block mb-6 sm:mb-0">
+          <!-- <div class="sm:hidden xl:block mb-6 sm:mb-0">
             <a href="#">
               <img :src="require('~/assets/img/logo/museyelogo.png')" class="w-24 -mt-2" alt="Nefa Logo" />
             </a>
-          </div>
+          </div> -->
           <ul class="space-y-4">
           </ul>
         </div>
         <div
           class="md:w-full lg:w-full lg:border-r w-full sm:w-1/2 xl:w-fit sm:px-16 py-6 sm:py-12 border-t sm:border-t xl:border-r border-[#DDDDDD]"
         >
-          <ul class="space-y-4">
+          <!-- <ul class="space-y-4">
             <NavLink name="Products" url="#" />
             <NavLink name="About Us" url="#" />
-          </ul>
+          </ul> -->
         </div>
         <div
           class="md:w-full md:border-t lg:w-full w-full sm:w-1/2 xl:w-fit sm:px-16 py-6 sm:py-12 border-t sm:border-t-0 sm:border-r-0 border-[#DDDDDD]"
         >
           <ul class="space-y-4">
             <NavLink name="Contact Us" url="https://docs.google.com/forms/d/e/1FAIpQLSfxLB0IGPnvEW6sIoKJiYomXEfPkOtoAzRJo8WIJpKqmYOgOA/viewform?usp=sf_link" />
-            <NavLink name="Area of Avaibility" url="#" />
+            <NavLink name="Linkedin" url="https://www.linkedin.com/company/museful/" />
+            <NavLink name="Instagram" url="https://www.instagram.com/museful.ai/" />
+
           </ul>
         </div>
-        <div
+        <!-- <div
           class="md:w-full md:border-t lg:w-full sm:px-10 py-6 sm:py-12 w-full sm:w-1/2 xl:w-[22rem] space-y-4 sm:border-t border-[#DDDDDD]"
         >
           <h5 class="text-sm font-medium text-[#666666] focus:outline-none focus:shadow-outline">Newsletter</h5>
@@ -48,11 +50,11 @@
               <ArrowRightIcon :size="20" />
             </button>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="py-8 sm:py-4 text-center text-sm text-[#666666] hover:text-gray-900">
-      &copy; Copyright 2023 Museye. All rights reserved
+      &copy; Copyright 2023 Museful. All rights reserved
     </div>
   </footer>
 </template>

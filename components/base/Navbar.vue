@@ -4,7 +4,7 @@
       <div class="flex flex-col lg:flex-row items-center space-x-4 xl:space-x-8">
         <div class="w-full flex flex-row items-center justify-between py-6">
           <div>
-            <img :src="require('~/assets/img/logo/museyelogo.png')" class="mx-auto w-30 xl:w-28" alt="Museye Logo" />
+            <img :src="require('~/assets/img/logo/Museful.png')" class="mx-auto h-30 w-30 xl:w-28" alt="Museye Logo" />
           </div>
           <button class="rounded-lg lg:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
             <SegmentIcon v-if="!open" :size="24" />

@@ -4,8 +4,8 @@
     <section id="hero" class="w-full pb-24">
       <BaseSection>
         <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
-          <span data-aos="fade-right" data-aos-once="true" class="text-base text-gradient font-semibold uppercase"
-            >Museful</span
+          <!-- <span data-aos="fade-right" data-aos-once="true" class="text-base text-gradient font-semibold uppercase"
+            >Museful</span -->
           >
           <h1
             data-aos="fade-right"
