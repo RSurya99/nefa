@@ -1,3 +1,4 @@
+<!-- <<<<<<< HEAD
 <!-- # NEFA Landing Page
 
 Free landing page template built using Nuxt 2 and Tailwindcss 3
@@ -51,3 +52,6 @@ Use it for learn, but please don’t republish, redistribute, or resell the temp
 
 Code by [rsurya99](https://github.com/rsurya99)
 UI/UX by [irvanmoses](https://www.facebook.com/irvan.moses) -->
+=======
+
+>>>>>>> 753994d70fe20b22934bf8854af2afce27e43f21 -->
