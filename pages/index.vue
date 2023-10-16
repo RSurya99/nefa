@@ -6,7 +6,7 @@
         <div class="col-span-12 lg:col-span-6 mt-12 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
           <!-- <span data-aos="fade-right" data-aos-once="true" class="text-base text-gradient font-semibold uppercase"
             >Museful</span -->
-          >
+
           <h1
             data-aos="fade-right"
             data-aos-once="true"
@@ -93,9 +93,9 @@
           <h2 id="aiintro" class="text-4xl font-semibold">
             Introducing  <span class="text-header-gradient">Museful</span> AI tour guide
           </h2>
-          <p class="paragraph">The spotify of museums</p>
+          <p class="paragraph">The most useful app for museums exploration!</p>
           <ul class="space-y-4 sm:space-y-2">
-            <LandingListItem title="Explore, plan and book your visits" />
+            <LandingListItem title="explore new dimensions inside of museums " />
             <LandingListItem title="Keep track of your museums visits and save your memories!" />
             <LandingListItem title="Personalised experience to each and every users!" />
           </ul>
@@ -291,28 +291,28 @@ export default {
       //     data: [35, 30, 60, 50, 35, 45, 40],
       //   },
       // ],
-      accordions: [
-        {
-          title: 'Why should I choose NEFA?',
-          description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over 8 million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
-        },
-        {
-          title: 'How secure is NEFA?',
-          description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
-        },
-        {
-          title: 'Do I have to buy a whole Bitcoin?',
-          description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
-        },
-        {
-          title: 'How do I actually buy Bitcoin?',
-          description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
-        },
-      ],
+      // accordions: [
+      //   {
+      //     title: 'Why should I choose NEFA?',
+      //     description:
+      //       "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over 8 million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+      //   },
+      //   {
+      //     title: 'How secure is NEFA?',
+      //     description:
+      //       "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+      //   },
+      //   {
+      //     title: 'Do I have to buy a whole Bitcoin?',
+      //     description:
+      //       "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+      //   },
+      //   {
+      //     title: 'How do I actually buy Bitcoin?',
+      //     description:
+      //       "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+      //   },
+      // ],
       steps: [
         {
           img: 'Goga.png',

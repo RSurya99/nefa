@@ -1,4 +1,4 @@
-# NEFA Landing Page
+<!-- # NEFA Landing Page
 
 Free landing page template built using Nuxt 2 and Tailwindcss 3
 
@@ -8,21 +8,21 @@ Free landing page template built using Nuxt 2 and Tailwindcss 3
 
 ## Project Structure
 
-.  
-├── assets  
-│ ├── css  
-│ └── img  
-├── components  
-│ └── base  
-├── layouts  
-├── mixins  
-├── pages  
-├── plugins  
-├── static  
-├── README.md  
-├── nuxt.config.js  
-├── package.json  
-└── tailwind.config.js  
+.
+├── assets
+│ ├── css
+│ └── img
+├── components
+│ └── base
+├── layouts
+├── mixins
+├── pages
+├── plugins
+├── static
+├── README.md
+├── nuxt.config.js
+├── package.json
+└── tailwind.config.js
 
 ## Getting Started
 
@@ -49,5 +49,5 @@ $ yarn generate
 
 Use it for learn, but please don’t republish, redistribute, or resell the template.
 
-Code by [rsurya99](https://github.com/rsurya99)  
-UI/UX by [irvanmoses](https://www.facebook.com/irvan.moses)
+Code by [rsurya99](https://github.com/rsurya99)
+UI/UX by [irvanmoses](https://www.facebook.com/irvan.moses) -->
