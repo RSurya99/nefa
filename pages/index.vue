@@ -322,9 +322,9 @@ export default {
         },
         {
           img: 'Zeyn.png',
-          title: 'Zeyn Hassan',
+          title: 'A. Zeyn Hassan',
           description:
-            'Former Historian, Museum Expert and an ambitious Software Develoepr',
+            'Former anceint Egyptian historian, museum expert and an ambitious software develoepr.',
         },
         {
           img: 'Artur.png',
