@@ -1,11 +1,4 @@
 # Museful Landing Page
-
-Free landing page template built using Nuxt 2 and Tailwindcss 3
-
-> [LIVE DEMO](https://nefa.vercel.app/)
-
-![Thumbnail](assets/img/thumbnail.jpg)
-
 ## Project Structure
 
 .
