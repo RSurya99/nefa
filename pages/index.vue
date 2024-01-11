@@ -141,7 +141,7 @@
     </section>
 
 
-    <!-- Getting started section -->
+    <!-- Getting started section 
     <section class="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div class="w-full py-16 flex flex-col items-center">
         <h2 data-aos="flip-down" class="text-3xl sm:text-4xl font-semibold text-center">
@@ -154,6 +154,7 @@
         </div>
       </div>
     </section>
+    -->
 
 
   </div>
